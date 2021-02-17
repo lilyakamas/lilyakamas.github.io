@@ -1,0 +1,35 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="Things">
+  <meta name="author" content="SitePoint">
+</head>
+
+<script>
+
+var counter = 0
+
+function incrementCounter() {
+    counter += 1
+    document.getElementById("counter").innerHTML = counter;
+    console.log(counter)
+    var test = fail;
+}
+</script>
+
+<body>
+
+    <h1>How many contestants are on the Bachelor?</h1>
+
+   <img src="https://abehandler.github.io/PM4P6X4ZIZE4ZDDXWUHYZTS5OA.jpg" alt="bachelor" width="500">
+
+   <p>Contestants <span id="counter">0</span></p>
+
+   <button type="button" onclick="incrementCounter()">Click me</button>
+</body>
+</html
