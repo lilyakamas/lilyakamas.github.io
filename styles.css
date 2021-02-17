@@ -1,0 +1,21 @@
+body {
+	margin: 40px;
+}
+
+#title {
+	font-weight: bold;
+	text-align:center;
+	background-color: #89CFF0;
+	color: white;
+	font-size: 60px;
+}
+
+#subtitle {
+	color: grey;
+	font-size: 16;
+}
+
+.paragraph {
+	color: black;
+	font-size: 12;
+}
