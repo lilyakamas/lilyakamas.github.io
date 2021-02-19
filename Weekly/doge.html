@@ -6,6 +6,12 @@
     function handleInput(){
         var input = document.getElementById("input").value
         document.getElementById("answer").innerHTML = input
+        document.getElementById("unique").innerHTML = input + "_this is odd"
+        document.getElementById("someID").src = "https://www.businessinsider.in/photo/80920866/elon-musk-wants-major-holders-of-cryptocurrency-dogecoin-to-sell-most-of-their-coins.jpg?imgsize=60876"
+
+        var node = document.createElementById("div");
+        node.innerHTML = "test"
+        document.getElementById("answer").appendChild(node);
     }
 
 </script>
@@ -18,13 +24,17 @@
 <h4 id="answer">It will break the power grid</h4>
 <h4 id="unique">Is this adding to the DOM?</h4>
 <img width="300px" src="https://cdn.vox-cdn.com/thumbor/IScTDQZVnUeO-aaXiIxx__oI5_8=/21x0:539x345/1820x1213/filters:focal(21x0:539x345):format(webp)/cdn.vox-cdn.com/assets/3727699/Dogecoin_logo.png" alt="Dogecoin">
+<h4 id="unique">Is this adding to the DOM?</h4> 
+
+<img id="someID" width="300px" src="https://cdn.vox-cdn.com/thumbor/IScTDQZVnUeO-aaXiIxx__oI5_8=/21x0:539x345/1820x1213/filters:focal(21x0:539x345):format(webp)/cdn.vox-cdn.com/assets/3727699/Dogecoin_logo.png" alt="Dogecoin">
+
 
 <br>
 <input type="text" id="input" name="fname">
 <input onclick="handleInput()" 
        class="favorite styled"
        type="button"
-       value="Submit">
+       value="Sumit">
 
 
 
