@@ -18,11 +18,10 @@
 	You must link to at least three related sources.  --> 
 
 		<div class="paragraph">
-			<img src='./hist.png'/>
 			<img src='./heatmap.png'/>
 					
 
-		<p> The Bachelor Nation has grown over the last <a href="https://bachelor-nation.fandom.com/wiki/Bachelor_Nation_Wiki#:~:text=While%20much%20of%20Bachelor%20Nation,love%20for%20the%20first%20time."> 28 seasons.</a> Chris Harrison has lead the nation through drama, heartbreak, but ultimately love. Each season, there is one bachelor (or bachelorette), who has to pick a partner out of 30 people - over the course of 10 weeks. However, as I have grown older, I have faced the stark reality that these are my peers on the show, not just these imaginary older women - which is what I felt like when I was <em>younger.</em> So, for this essay, I wanted to see if there was any correlation involving age and other varibles. The data we are looking at is from Kaggle. Specifically, <a href="https://www.kaggle.com/brianbgonz/the-bachelorette-contestants?select=bachelor-contestants.csv">this datatset,</a>the bachlor contestants. </p>
+		<p> The Bachelor Nation has grown over the last <a href="https://bachelor-nation.fandom.com/wiki/Bachelor_Nation_Wiki#:~:text=While%20much%20of%20Bachelor%20Nation,love%20for%20the%20first%20time."> 28 seasons.</a> Chris Harrison has lead the nation through drama, heartbreak, but ultimately love. Each season, there is one bachelor (or bachelorette), who has to pick a partner out of 30 people - over the course of 10 weeks. However, as I have grown older, I have faced the stark reality that these are my peers on the show, not just these imaginary older women - which is what I felt like when I was <em>younger.</em> So, for this essay, I wanted to see if there was any correlation involving age and other varibles. The data we are looking at is from Kaggle. Specifically, <a href="https://www.kaggle.com/brianbgonz/the-bachelorette-contestants?select=bachelor-contestants.csv">this datatset,</a> the bachlor contestants. It goes over 16 seasons. </p>
 
 
 		<p> To begin reading the data, I wanted to understand the range of ages that the contestants were. In python, I coded this to calculate the min/max of the dataset. 
@@ -30,11 +29,13 @@
 				min_age = min(df['Age'])</code>
 
 		That printed out the simple answer = <p>Max age: 36.0; Min age: 21.0</p>
-		Once I calulated a scatter plot comparing Age and Elimination week, I realized something critical. There was no correlation. </p>
 
-		<p> describe histogram here </p>
+		The next step is to plot this on a graph to visually see the age data. In this histogram, also plotted in Python, displays the the age frequency of Bachelor Contesetants. <img src='./hist.png'/> As you can see here, the most common age is 25. The outliers in the data are the min/max, and there are some ages unaccounted for. This shows that the data is <b>(NAN)</b> </p>
 
-		<p> heat map discription</p>
+		<p> The average age of the girls who stayed the longest, is 26 years old. </p>
+
+		<p> heat map discription
+		While not directly states in this visualization,</p>
 
 		<p> recap</p>
 
