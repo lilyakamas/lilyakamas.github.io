@@ -4,25 +4,39 @@
 	<link rel='stylesheet' href='./styles.css'> 
 </head>
 	<body>
-		<h1 id="title">This is a title</h1>
-		<h2 id="subtitle">This is a subtitle</h2>
+		<h1 id="title">Bachelor Essay</h1>
+		<h2 id="subtitle">What is the correlation?</h2>
 
-
-	<!--  --> 
+	<!--
+	Publish a file called wa4.html to your Github repo with your essay. You should submit a link to your wa4.html page.
+	You must use HTML and CSS to make your argument.
+	You must use at least 1 CSS ID
+	You must use at least 1 CSS class
+	Your argument must be based on information from at least one dataset. If you search, you will find many datasets for many TV shows online (e.g. Kaggle (Links to an external site.) or Github (Links to an external site.)) Your argument should explain where you got the data, so the reader can interpret your conclusions.
+	You should make at least one graphic using the data analysis software of your choosing (pandas, Excel, Google Sheets, Tableau) and include it in on your page
+	You must compute at least one summary statistic (mean, variance, min/max etc.). You can use any software for this.
+	You must link to at least three related sources.  --> 
 
 		<div class="paragraph">
 			<img src='./hist.png'/>
 			<img src='./heatmap.png'/>
-					<p>Max age: 36.0; Min age: 21.0</p>
+					
 
-		<p></p>
+		<p> The Bachelor Nation has grown over the last <a href="https://bachelor-nation.fandom.com/wiki/Bachelor_Nation_Wiki#:~:text=While%20much%20of%20Bachelor%20Nation,love%20for%20the%20first%20time."> 28 seasons.</a> Chris Harrison has lead the nation through drama, heartbreak, but ultimately love. Each season, there is one bachelor (or bachelorette), who has to pick a partner out of 30 people - over the course of 10 weeks. However, as I have grown older, I have faced the stark reality that these are my peers on the show, not just these imaginary older women - which is what I felt like when I was <em>younger.</em> So, for this essay, I wanted to see if there was any correlation involving age and other varibles. The data we are looking at is from Kaggle. Specifically, <a href="https://www.kaggle.com/brianbgonz/the-bachelorette-contestants?select=bachelor-contestants.csv">this datatset,</a>the bachlor contestants. </p>
 
 
-		<p></p>
+		<p> To begin reading the data, I wanted to understand the range of ages that the contestants were. In python, I coded this to calculate the min/max of the dataset. 
+			<code>max_age = max(df['Age'].values)
+				min_age = min(df['Age'])</code>
 
-		<p></p>
+		That printed out the simple answer = <p>Max age: 36.0; Min age: 21.0</p>
+		Once I calulated a scatter plot comparing Age and Elimination week, I realized something critical. There was no correlation. </p>
 
-		<p></p>
+		<p> describe histogram here </p>
+
+		<p> heat map discription</p>
+
+		<p> recap</p>
 
 
 		<p>Thank you for reading my response! If you wish to see my other pages, <a href="https://lilyakamas.github.io/index.html">click here!</a></p>
