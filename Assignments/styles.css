@@ -1,5 +1,37 @@
+* {
+	font-family: sans-serif !important;
+}
+
 body {
 	margin: 40px;
+}
+
+* {
+	font-family: sans-serif !important;
+}
+
+.custom-btn {
+	padding: 10px;
+	color: white;
+	background-color: blue;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.card {
+	background-color: whitesmoke;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+}
+
+.container {
+	text-align: center;
+}
+
+.title {
+	color: green;
+	font-size: 50px;
 }
 
 #title {
