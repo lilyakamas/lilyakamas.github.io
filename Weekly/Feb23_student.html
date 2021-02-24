@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html>
+
+    <!-- https://stackoverflow.com/questions/7790725/javascript-track-mouse-position -->
+
+    <head>
+      <meta charset="utf-8">
+      <title>Example Mouse Tracker</title>
+      <style>    
+        body {height: 3000px;}
+        .dot {width: 2px;height: 2px;background-color: green;position: absolute;}
+      </style>
+    </head>
+    <body>
+    <p>Mouse tracker</p> <!-- a basic p tag, simple html -->
+    <div id="main" style="width:500px;height:500px;border:1px solid black">
+        <!--this is creating the box we see on the page-->
+
+    </div>
+
+    <script>
+
+    var dotColor = "black"; 
+        // this is the color of the dot that we are tracking 
+
+    function setColor(color) {
+       // pass
+
+       // TBH not sure what this does
+    }
+    
+    onmousemove = function(e){ 
+        //calls a function on an event
+        //Logging
+        //console.log("mouse location:", e.clientX, e.clientY);
+
+        // what does (e) do?
+        
+
+        var pos = e; 
+        var dot;
+        dot = document.createElement('div');
+
+        // console.log(e)
+
+        dot.className = "dot"; // element.className
+        dot.style.left = pos.x + "px";
+        dot.style.top = pos.y + "px";
+
+        // x and y position of the mouse, being recorded in mouse event
+
+        var element = document.getElementById("main");
+
+        element.appendChild(dot); 
+            // add an element to the list - we did this last class 
+    }      
+    </script>
+
+    <div> <!--span is an element which is used to color a part of a text -->
+        <span>Red</span>
+    </div>
+
+    <div>
+        <span >Blue</span>
+    </div>
+
+    <div>
+        <span >Black</span>
+    </div>
+
+    </body>
+    </html>
