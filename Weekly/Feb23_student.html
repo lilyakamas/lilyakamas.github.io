@@ -39,19 +39,26 @@
 
         var pos = e; 
         var dot;
-        dot = document.createElement('div');
+        dotElem = document.createElement('div');
+
+    // created a div called dot, which was confusing. We changed it to dotELement instead
 
         // console.log(e)
 
-        dot.className = "dot"; // element.className
-        dot.style.left = pos.x + "px";
-        dot.style.top = pos.y + "px";
+        dotElem.className = "dot"; // element.className
+        dotElem.style.left = pos.x + "px";
+        dotElem.style.top = pos.y + "px";
 
         // x and y position of the mouse, being recorded in mouse event
 
         var element = document.getElementById("main");
 
-        element.appendChild(dot); 
+        if (true){
+            console.log("will this fire?")
+        
+        }
+
+        element.appendChild(dotElem); 
             // add an element to the list - we did this last class 
     }      
     </script>

@@ -1,5 +1,5 @@
 
-/* this is the css for home_page assignment*/
+/* this is the css for the home_page assignment*/
 
 
 
@@ -10,6 +10,14 @@
 
 body {
 	margin: 40px;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
 }
 
 * {
