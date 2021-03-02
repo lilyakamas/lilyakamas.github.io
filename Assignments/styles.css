@@ -2,8 +2,6 @@
 /* this is the css for the home_page assignment*/
 
 
-
-
 * {
 	font-family: sans-serif !important;
 }
@@ -26,7 +24,7 @@ footer {
 
 .custom-btn {
 	padding: 10px;
-	color: white;
+	color: #545454;
 	background-color: #E6D1DE;
 	font-weight: bold;
 	border-radius: 10px;
@@ -44,7 +42,7 @@ footer {
 }
 
 .title {
-	color: green;
+	color: #D4C1CD;
 	font-size: 50px;
 }
 
