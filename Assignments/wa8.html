@@ -38,13 +38,13 @@ footer {
 
 <div style='text-align: center;'>
 		<h2>Statistics </h2>
-		<p>Using the code set up in class, I created an aggregation function to determine a statistic about the data. The statistic computed is like the probability of arrest per precinct. In the code, loaded the CSV line by line, and each line is converted into an array of field values. After we grouped those elements per precinct in a dictionary, for each precinct in the dictionary, we iterate through all of its records, see if a particular record is an arrest, and increment the total for that precinct. Finally, we computed the percentage of number of arrests over the total records for that precinct. We saved the computed values in a dictionary and dumped them into a JSON file for the chart in Step #2.
+		<p>Using the code set up in class, I created an aggregation function to determine a statistic about the data. The statistic computed is like the probability of arrest per precinct. In the code, loaded the CSV line by line, and each line is converted into an array of field values. After I grouped those elements per precinct in a dictionary, for each precinct in the dictionary, I iterate through all of its records, see if a particular record is an arrest, and increment the total for that precinct. Finally, I computed the percentage of number of arrests over the total records for that precinct. I saved the computed values in a dictionary and dumped them into a JSON file for the chart in Step #2.
 		 For a link to the python code, <a href="https://github.com/lilyakamas/lilyakamas.github.io/blob/master/Assignments/WA8.ipynb">click here</a></p>
 
 		<!-- The submission (1) computes a statistic using filtering and aggregation (2) links to the code and (3) explains the code -->
 	
 		<h2>Visualizations </h2>
-		<p>I created a bar graph for the custom chart that depicts the probability of being arrested per precinct. We copied the JSON data into the HTML folder, and we dynamically loaded it in the chart, including data and labels. Then we dynamically generated the colors on random.</p> 
+		<p>I created a bar graph for the custom chart that depicts the probability of being arrested per precinct. I copied the JSON data into the HTML folder, and I dynamically loaded it in the chart, including data and labels. Then I dynamically generated the colors on random.</p> 
 		<h3>Arrest Probability Per Denver Precinct</h3><!-- insert chart here -->
 		<canvas id="myChart" width="1960" height="490" class="chartjs-render-monitor"
 		style="display: block; height: 245px; width: 980px;"
@@ -55,14 +55,14 @@ footer {
 		<!-- The submission successfully makes and presents a polished chart based on the statistic. The axis are appropriately scaled, there is a legend if appropriate, the chart has a title, etc. -->
 
 		<h2>Anaylsis </h2>
-		<p>We can see a few outliers in our data through the analysis of this data. In some precincts, their arrest rate is upwards of 25%, which is relatively high. These precincts may be located in more dangerous or active communities. Some precincts, however, seem to have low probability rates, which suggests those areas may have less police presence. There is one more exciting outlier for precinct '759'. They have no arrests on record. Now, this could be a mishap from the data.. or is it? For future research, I ask, "Is there a geographical correlation between these numbers?". I could not do this in my project because the lat/lon data represents where the incident took place, not where the precinct station is. We would also ask, "what types of arrests are most common?", do some precincts have more vehicle accidents that lead to more arrests? Future research will be needed to determine these answers.</p>
+		<p>We can see a few outliers in our data through the analysis of this data. In some precincts, their arrest rate is upwards of 25%, which is relatively high. These precincts may be located in more dangerous or active communities. Some precincts, however, seem to have low probability rates, which suggests those areas may have less police presence. There is one more exciting outlier for precinct '759'. They have no arrests on record. Now, this could be a mishap from the data.. or is it? For future research, I ask, "Is there a geographical correlation between these numbers?". I could not do this in my project because the lat/lon data represents where the incident took place, not where the precinct station is. I would also ask, "what types of arrests are most common?", do some precincts have more vehicle accidents that lead to more arrests? Future research will be needed to determine these answers.</p>
 
 		<!-- The author thinks through possible explanations for the observed phenomenon and explains them clearly. The author ends by asking a question for further study. -->
 
 
 
 	<footer> 
-		
+
 		If you wish to see my other pages, <a href="https://lilyakamas.github.io/index.html">click here!</a>
 	</footer>
 
