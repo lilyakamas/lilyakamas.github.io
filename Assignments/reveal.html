@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>March29 In-Class</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>A Very Large Header</h1>
+					<p style="font-weight: bold;">Thanks for checkin' in!</p>
+					<img src="https://media.giphy.com/media/14kdiJUblbWBXy/giphy.gif">
+
+				</section>
+
+
+				<section>
+					Three emojis are worth 1,000 words...
+					<p>&#x1F31A &#x1F438 &#x1F31D</p>
+				</section>
+
+				<section>
+					<p>take a break, enjoy doge</p>
+					<img src="https://media.giphy.com/media/1d7F9xyq6j7C1ojbC5/giphy.gif">
+				</section>
+
+				<section>
+					<p>a dictionary code block about Strawberry <3</p>
+					<pre><code data-trim data-noescape>
+					fishdict = {
+						  "type": "Betta",
+						  "color": "Pink and White",
+						  "age": 2
+						}
+  					</code></pre>
+				</section>
+
+				<section>
+					<h4>This is a slide with animations or transitions</h4>
+					<p>Click the next button</p>
+					<p class="fragment fade-in-then-semi-out">Coding transitions</p>
+					</p>
+					<p class="fragment highlight-green">can <em>never</em> get</p>
+					<p class="fragment grow">EXCESSIVE!</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
+
+<!-- 
+https://megapixelsmatthews.github.io/codeSlides.html
+https://caseyjpaul.github.io/intro%20to%20reveal.js%20copy.html#/3
+https://zemc1520.github.io/50th_try_AHHHHHH.github.io/slideshowjs.html#/3 -->
