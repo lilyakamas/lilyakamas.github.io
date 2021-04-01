@@ -16,7 +16,7 @@ You should have some kind of introduction/motivation, a statement of the problem
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>March29/31 In-Class</title>
+		<title>wa10 - METAdeck</title>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
@@ -29,7 +29,7 @@ You should have some kind of introduction/motivation, a statement of the problem
 
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section data-transition="fade">
 					<h1>HOW TO CREATE A REVEAL.JS SLIDESHOW!</h1>
 					<p style="font-weight: bold;">brought to me!</p>
 					<img src="https://media.giphy.com/media/14kdiJUblbWBXy/giphy.gif">
@@ -37,10 +37,10 @@ You should have some kind of introduction/motivation, a statement of the problem
 				</section>
 
 
-				<section>
+				<section data-transition="fade">
 					Introduction and Motivation
-					<p>Hi! Welcome to my slidedeck about well, how to create a slide deck! There are multiple features you can use, including:</p>
-					<p>&#x1F31A &#x1F438 &#x1F31D</p>
+					<p>Hi! Welcome to my slidedeck about well, how to create a slide deck! The features we will be analyzing include:</p>
+					<p>Auto-Scroll through the deck!</p>
 				</section>
 
 				<section>
@@ -49,23 +49,32 @@ You should have some kind of introduction/motivation, a statement of the problem
 				</section>
 
 				<section>
-					<p>interested in adding those cool features to your slideshow? follow the steps below!:</p>
+					<p>interested in adding this cool feature to your slideshow? follow the steps below!:</p>
+					<p>in the first block of code the outerslide field is the number of miliseconds between slides. If you wish to pause the feature at anytime, press 'A'</p>
 					<pre><code data-trim data-noescape>
-					fishdict = {
-						  "type": "Betta",
-						  "color": "Pink and White",
-						  "age": 2
-						}
-  					</code></pre>
+					Reveal.initialize({
+					  autoSlide: 5000,
+					  loop: true
+						});  					
+					</code></pre>
 				</section>
 
 				<section>
-					<h4>This is a slide with animations or transitions</h4>
-					<p>Click the next button</p>
-					<p class="fragment fade-in-then-semi-out">Coding transitions</p>
-					</p>
-					<p class="fragment highlight-green">can <em>never</em> get</p>
-					<p class="fragment grow">EXCESSIVE!</p>
+					<p>if you wish to time your slides, follow this step:</p>
+					<pre><code data-trim data-noescape>
+					  <p>After 2 seconds the first fragment will be shown.</p>
+					  <p class="fragment" data-autoslide="10000">After 10 seconds the next fragment will be shown.</p>
+					  <p class="fragment">Now, the fragment is displayed for 2 seconds before the next slide is shown.</p>
+					</code></pre>
+
+				</section>
+
+				<section>
+					<h4>Transitions! & Animations! </h4>
+					<p>Click on the next button or wait 5 seconds</p>
+					<p class="fragment fade-in-then-semi-out">Auto-slide</p>
+					<p class="fragment highlight-green">is <em>always</em> a</p>
+					<p class="fragment grow">GREAT TIME!</p>
 				</section>
 
 
@@ -74,6 +83,10 @@ You should have some kind of introduction/motivation, a statement of the problem
 					<img src="https://media.giphy.com/media/1d7F9xyq6j7C1ojbC5/giphy.gif">
 				</section>
 
+		<!-- 	<footer> 
+				If you wish to see my other pages, <a href="https://lilyakamas.github.io/index.html">click here!</a>
+			</footer>
+ -->
 			</div>
 		</div>
 
@@ -90,8 +103,12 @@ You should have some kind of introduction/motivation, a statement of the problem
 				hash: true,
 				slideNumber: 'h.v', // adds numbers to the vertical slides
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+
+				autoSlide: 5000,
+	 			loop: true
 			});
+
 
 		</script>
 	</body>
