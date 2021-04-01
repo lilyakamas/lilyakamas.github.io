@@ -1,0 +1,128 @@
+<!-- We spent this week learning how to use Reveal.js to make interactive presentations for the web. Reveal.js is especially popular in open source communities because of its strong support for representing code compared to a tool like Powerpoint.
+
+For this assignment, make a "meta-deck": a presentation describing how you made the presentation in Reveal.js. Another way to think about this is you're making a tutorial for others on how to use a particular feature of Reveal.js.
+
+Your presentation should be in the range of 5-10 slides and include:
+
+Some kind of media (static or animated image)
+At least two code blocks illustrating how to use a feature
+Some kind of animation ("fragment") or slide transition
+You should have some kind of introduction/motivation, a statement of the problem, how to solve the problem, and conclude with next steps and links to other resources. Publish this deck on your GitHub Page and submit the URL on Canvas. --> 
+
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>March29/31 In-Class</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>HOW TO CREATE A REVEAL.JS SLIDESHOW!</h1>
+					<p style="font-weight: bold;">brought to me!</p>
+					<img src="https://media.giphy.com/media/14kdiJUblbWBXy/giphy.gif">
+
+				</section>
+
+
+				<section>
+					Introduction and Motivation
+					<p>Hi! Welcome to my slidedeck about well, how to create a slide deck! There are multiple features you can use, including:</p>
+					<p>&#x1F31A &#x1F438 &#x1F31D</p>
+				</section>
+
+				<section>
+					<p>take a break, enjoy doge</p>
+					<img src="https://media.giphy.com/media/1d7F9xyq6j7C1ojbC5/giphy.gif">
+				</section>
+
+				<section>
+					<p>interested in adding those cool features to your slideshow? follow the steps below!:</p>
+					<pre><code data-trim data-noescape>
+					fishdict = {
+						  "type": "Betta",
+						  "color": "Pink and White",
+						  "age": 2
+						}
+  					</code></pre>
+				</section>
+
+				<section>
+					<h4>This is a slide with animations or transitions</h4>
+					<p>Click the next button</p>
+					<p class="fragment fade-in-then-semi-out">Coding transitions</p>
+					</p>
+					<p class="fragment highlight-green">can <em>never</em> get</p>
+					<p class="fragment grow">EXCESSIVE!</p>
+				</section>
+
+
+				<section>
+					<p>thanks for clicking through my presentation! Enjoy the rest of the day!</p>
+					<img src="https://media.giphy.com/media/1d7F9xyq6j7C1ojbC5/giphy.gif">
+				</section>
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v', // adds numbers to the vertical slides
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+	</body>
+</html>
+
+
+
+
+<!-- 
+https://megapixelsmatthews.github.io/codeSlides.html
+https://caseyjpaul.github.io/intro%20to%20reveal.js%20copy.html#/3
+https://zemc1520.github.io/50th_try_AHHHHHH.github.io/slideshowjs.html#/3 -->
+
+
+<!-- 		<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Presentation should be 5-10 slides and include</p>
+						<ul>
+							<li>Some kind of media (static or animated images)</li>
+							<li>At least two code blocks illustrating how to implement a feature</li>
+							<li>Some kind of animation ("fragment") or slide transition</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Your deck should have parts like:</p>
+						<ul>
+							<li><b>Introduction/motivation</b>: Why would someone need this functionality?</li>
+							<li><b>Statement of problem</b>: What is the minimum example to demonstrate? What are challenges?</li>
+							<li><b>Solution details</b>: step-by-step guide with examples and code blocks on how to implement</li>
+							<li><b>Conclusion</b>: Links to next steps, resources, citations</li>
+						</ul>
+					</section> -->

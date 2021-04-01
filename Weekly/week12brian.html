@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Week 12 Slides</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>INFO 3402: Information Exposition</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan & Abram Handler</p>
+					<p style="color:#565A5C">Week 12: March 29 - April 2 2021</h5>
+				</section>
+				
+
+				<section>
+					<h3>Outline for today</h3>
+					<ul>
+						<li><a href="https://github.com/brianckeegan/brianckeegan.github.io/blob/master/week11.html">Week 11 code here</a> (<a href="https://brianckeegan.github.io/week11.html">slides</a>)</li>
+						<li>Weekly Assignment 10</li>
+						<li>Extending <a href="https://revealjs.com/">Reveal.js</a></li>
+						<ul>
+							<li>Animating code blocks</li>
+							<li>Vertical slides</li>
+						</ul>
+						<li>Daily participation</li>
+						<li>Hacking breakouts</li>
+						<ul>
+							<li>Slide numbers</li>
+							<li>Themes</li>
+							<li>Notes</li>
+							<li>Math</li>
+						</ul>
+						<li>Hacking share-outs</li>
+					</ul>
+				</section>
+
+				<!-- Start of a vertical slide -->
+				<section>
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p><b>Due Friday, April 2 by midnight</b></p>
+						<p>Make a "meta-deck": a presentation describing how you made the presentation in Reveal.js.</p>
+						<p>You're making a tutorial for others on how to use a particular feature of Reveal.js.</p>
+					</section>
+
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Presentation should be 5-10 slides and include</p>
+						<ul>
+							<li>Some kind of media (static or animated images)</li>
+							<li>At least two code blocks illustrating how to implement a feature</li>
+							<li>Some kind of animation ("fragment") or slide transition</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Your deck should have parts like:</p>
+						<ul>
+							<li><b>Introduction/motivation</b>: Why would someone need this functionality?</li>
+							<li><b>Statement of problem</b>: What is the minimum example to demonstrate? What are challenges?</li>
+							<li><b>Solution details</b>: step-by-step guide with examples and code blocks on how to implement</li>
+							<li><b>Conclusion</b>: Links to next steps, resources, citations</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Ideas:</p>
+						<ul>
+							<li>Implementing documented features (easy)</li>
+							<li>Image and text side-by-side (easy-medium)</li>
+							<li>Embedding another webpage (medium)</li>
+							<li>Customizing CSS (medium)</li>
+							<li>Utilizing API to customize (hard) </li>
+							<li>Adding interactive visualizations (hard)</li>
+						</ul>
+					</section>
+				</section>
+				<!-- End of a vertical slide -->
+
+
+				<section>
+
+					<h3>Extending Reveal.js</h3>
+					<ul>
+						<li>Animating code blocks</li>
+						<li>Vertical slides</li>
+						<li>Slide numbers</li>
+						<li>Themes</li>
+						<li>Notes</li>
+						<li>Math</li>
+					</ul>
+				</section>
+
+				<!-- Vertical slides for each topic -->
+				<section>
+					<section>
+						<h3>Animating code blocks</h3>
+						<p>How do we add <a href="https://revealjs.com/code/">animations</a> to code blocks?</p>
+						<p>(Easy)</p>
+					</section>	
+
+					<section>
+						<h3>Animating code blocks</h3>
+						<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4><script type="text/template">
+							<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4>
+								def addition(a,b):
+							          sum = a + b
+						           return sum
+						    </code></pre>
+							</script></pre></code>
+						</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Vertical slides</h3>
+						<p>How do we make <a href="https://revealjs.com/vertical-slides/">vertical slides</a>?<p>
+						<p>(Easy)</p>
+					</section>
+
+					<section>
+						<h3>Vertical slides v1</h3>
+						<pre><code data-trim data-line-numbers=1,6|2,5|3|4><script type="text/template">
+							<section>Horizontal Slide</section>
+								<section>
+								  <section>Vertical Slide 1</section>
+								  <section>Vertical Slide 2</section>
+								</section>
+							</section>
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Vertical slides v2</h3>
+						<pre><code data-trim data-line-numbers=1,4|2|3><script type="text/template">
+							<section>
+								<section>Vertical Slide 1</section>
+								<section>Vertical Slide 2</section>
+							</section>
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Vertical slides</h3>
+						<p>What does this look like in the <a href="https://revealjs.com/overview/">Overview mode</a>?</p>
+						<p>Press ESC</p>
+					</section>
+
+				</section>
+
+				<section>
+					<h3>Daily Participation</h3>
+					<ol>
+						<li><a href="https://github.com/brianckeegan/brianckeegan.github.io/blob/master/week12.html">Download this Reveal.js presentation</a></li>	
+						<li>Join a Hack & Tell breakout room</li>
+						<li>15 minutes to implement within file</li>
+						<li>Group share-out at end of class</li>
+						<li><a href="https://canvas.colorado.edu/courses/70121/assignments/1020972">Submit revised file to Canvas</a></li>
+					</ol>
+					
+				</section>
+
+				<section>
+					<h3>Hack & Tell Breakouts</h3>
+					<p>2 breakout rooms for each topic</p>
+					<p>~6-8 students per room</p>
+					<ul>
+						<li>Slide numbers</li>
+						<li>Themes</li>
+						<li>Notes</li>
+						<li>Math</li>
+					</ul>
+					<p>Have a basic example of how to implement</p>
+					<p>Share example to GitHub Pages</p>
+				</section>
+
+				<section>
+
+					<section>
+						<h3>Slide numbers</h3>
+						<p>How do we add <a href="https://revealjs.com/slide-numbers/">slide numbers</a>?</p>
+						<p>(Easy)</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Themes</h3>
+						<p>How do we change the <a href="https://revealjs.com/themes/">theme</a>?</p>
+						<p>(Easy)</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Notes</h3>
+						<p>How do we add <a href="https://revealjs.com/speaker-view/">speaker notes</a>?</p>
+						<p>(Easy-Medium)</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Math</h3>
+						<p>How do we add <a href="https://revealjs.com/math/">math</a>?</p>
+						<p>(Medium)</p>
+						<section>
+					<!-- 	<h3>Maxwell&#8217;s Equations</h3>
+
+						\[  \begin{aligned}
+						\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\
+						\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\
+						\nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}
+						\]
+					</section>
+						</section> -->
+				</section>
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v', // slide numbers? 
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
