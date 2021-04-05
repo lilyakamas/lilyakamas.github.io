@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Week 12 Slides</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>INFO 3402: Information Exposition</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan & Abram Handler</p>
+					<p style="color:#565A5C">Week 12: March 29 - April 2 2021</h5>
+				</section>
+				
+
+				<section>
+					<h3>Outline for Wednesday, March 31</h3>
+					<ul>
+						<li><a href="https://github.com/brianckeegan/brianckeegan.github.io/blob/master/week11.html">Week 11 code here</a> (<a href="https://brianckeegan.github.io/week11.html">slides</a>)</li>
+						<li>Weekly Assignment 10</li>
+						<li>Extending <a href="https://revealjs.com/">Reveal.js</a></li>
+						<ul>
+							<li>Animating code blocks</li>
+							<li>Vertical slides</li>
+						</ul>
+						<li>Hacking breakouts & share-outs</li>
+						<ul>
+							<li>Slide numbers</li>
+							<li>Themes</li>
+							<li>Notes</li>
+							<li>Math</li>
+						</ul>
+					</ul>
+				</section>
+
+				<!-- Start of a vertical slide -->
+				<section>
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p><b>Due Friday, April 2 by midnight</b></p>
+						<p>Make a "meta-deck": a presentation describing how you made the presentation in Reveal.js.</p>
+						<p>You're making a tutorial for others on how to use a particular feature of Reveal.js.</p>
+					</section>
+
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Presentation should be 5-10 slides and include</p>
+						<ul>
+							<li>Some kind of media (static or animated images)</li>
+							<li>At least two code blocks illustrating how to implement a feature</li>
+							<li>Some kind of animation ("fragment") or slide transition</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Your deck should have parts like:</p>
+						<ul>
+							<li><b>Introduction/motivation</b>: Why would someone need this functionality?</li>
+							<li><b>Statement of problem</b>: What is the minimum example to demonstrate? What are challenges?</li>
+							<li><b>Solution details</b>: step-by-step guide with examples and code blocks on how to implement</li>
+							<li><b>Conclusion</b>: Links to next steps, resources, citations</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Weekly Assignment 10</h3>
+						<p>Ideas:</p>
+						<ul>
+							<li>Implementing documented features (easy)</li>
+							<li>Image and text side-by-side (easy-medium)</li>
+							<li>Embedding another webpage (medium)</li>
+							<li>Customizing CSS (medium)</li>
+							<li>Utilizing API to customize (hard) </li>
+							<li>Adding interactive visualizations (hard)</li>
+						</ul>
+					</section>
+				</section>
+				<!-- End of a vertical slide -->
+
+
+				<section>
+
+					<h3>Extending Reveal.js</h3>
+					<ul>
+						<li>Animating code blocks</li>
+						<li>Vertical slides</li>
+						<li>Slide numbers</li>
+						<li>Themes</li>
+						<li>Notes</li>
+						<li>Math</li>
+					</ul>
+				</section>
+
+				<!-- Vertical slides for each topic -->
+				<section>
+					<section>
+						<h3>Animating code blocks</h3>
+						<p>How do we add <a href="https://revealjs.com/code/">animations</a> to code blocks?</p>
+						<p>(Easy)</p>
+					</section>	
+
+					<section>
+						<h3>Animating code blocks</h3>
+						<pre><code data-trim class="html" data-line-numbers=1,5|2-4|2|3|4><script type="text/template">
+							<pre><code data-trim class="python" data-line-numbers=1,5|2-4|2|3|4>
+								def addition(a,b):
+						           sum = a + b
+					            return sum
+							</code></pre>
+						</script></pre></code>
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Animating code blocks</h3>
+						<p>What does this look like?</p>
+						<pre><code class="python" data-trim data-line-numbers=1|2|3>
+						def addition(a,b):
+						  sum = a + b
+						  return sum
+						</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Vertical slides</h3>
+						<p>How do we make <a href="https://revealjs.com/vertical-slides/">vertical slides</a>?<p>
+						<p>(Easy)</p>
+					</section>
+
+					<section>
+						<h3>Vertical slides v1</h3>
+						<pre><code class="html" data-trim data-line-numbers=1,6|2,5|3|4><script type="text/template">
+							<section>Horizontal Slide</section>
+								<section>
+								  <section>Vertical Slide 1</section>
+								  <section>Vertical Slide 2</section>
+								</section>
+							</section>
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Vertical slides v2</h3>
+						<pre><code class="html" data-trim data-line-numbers=1,4|2|3><script type="text/template">
+							<section>
+								<section>Vertical Slide 1</section>
+								<section>Vertical Slide 2</section>
+							</section>
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Vertical slides</h3>
+						<p>What does this look like in the <a href="https://revealjs.com/overview/">Overview mode</a>?</p>
+						<p>Press ESC</p>
+					</section>
+
+				</section>
+
+				<section>
+					<h3>Daily Participation</h3>
+					<ol>
+						<li><a href="https://github.com/brianckeegan/brianckeegan.github.io/blob/master/week12.html">Download this Reveal.js presentation</a></li>	
+						<li>Join a Hack & Tell breakout room</li>
+						<li>15 minutes to implement within file</li>
+						<li>Group share-out at end of class</li>
+						<li><a href="https://canvas.colorado.edu/courses/70121/assignments/1020972">Submit revised file to Canvas</a></li>
+					</ol>
+					
+				</section>
+
+				<section>
+					<h3>Hack & Tell Breakouts</h3>
+					<p>2 breakout rooms for each topic</p>
+					<p>~6-8 students per room</p>
+					<ul>
+						<li>Slide numbers</li>
+						<li>Themes</li>
+						<li>Notes</li>
+						<li>Math</li>
+					</ul>
+					<p>Have a basic example of how to implement</p>
+					<p>Share example to GitHub Pages</p>
+				</section>
+
+				<section>
+
+					<section>
+						<h3>Slide numbers</h3>
+						<p>How do we add <a href="https://revealjs.com/slide-numbers/">slide numbers</a>?</p>
+						<p>(Easy)</p>
+					</section>
+
+					<section>
+						<h3>Slide numbers</h3>
+						<p>Add this option to the <code>Reveal.initialize</code> block</p>
+						<pre><code data-trim class="js" data-line-numbers=3>
+							Reveal.initialize({
+								hash: true,
+								slideNumber: 'c/t',
+						</code></pre>
+						<p>The <code>hash: true</code> lets you access slides by URL</p>
+					</section>
+
+					<section>
+						<h3>Slide numbers</h3>
+						<p>You can experiment with different formats</p>
+						<p>This <code>h/v</code> is good for presentations with many vertical slides</p>
+						<pre><code data-trim class="js" data-line-numbers=3>
+							Reveal.initialize({
+								hash: true,
+								slideNumber: 'h/v',
+						</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Themes</h3>
+						<p>How do we change the <a href="https://revealjs.com/themes/">theme</a>?</p>
+						<p>(Easy)</p>
+					</section>
+
+					<section>
+						<h3>Themes</h3>
+						<p>Reveal.js comes with 11 themes by default</p>
+						<p>These default themes are defined in standalone CSS files we get from the CDN</p>
+						<p>Swap out the default "black" theme file</p>
+						<pre><code class="html" data-trim><script type="text/template">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+						</script></code></pre>
+						<p>for another on <a href="https://revealjs.com/themes/">the list</a> like "moon"</p> 
+						<pre><code class="html" data-trim><script type="text/template">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Themes</h3>
+						<p>These are not the only themes you can use</p>
+						<p>You can always <a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/README.md">create your own themes</a> with custom CSS</p>
+						<p>Or follow others' tutorials:</p>
+						<ul>
+							<li><a href="https://chenhuijing.com/blog/customising-revealjs-beyond-theming/#%F0%9F%9A%B2">Customising Reveal.js beyond creating a personalised theme</a></li>
+							<li><a href="https://medium.com/myplanet-musings/building-a-responsive-reveal-js-theme-399179632cc6">Building a Responsive Reveal.js Theme</a></li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Notes</h3>
+						<p>How do we add <a href="https://revealjs.com/speaker-view/">speaker notes</a>?</p>
+						<p>(Easy-Medium)</p>
+					</section>
+
+					<section>
+						<h3>Notes</h3>
+						<p>There are two strategies for adding speaker notes</p>
+						<p>Strategy 1: add an <code>aside</code> tag within a <code>section</code></p>
+						
+						<pre><code class="html" data-trim data-line-numbers=|4-6><script type="text/template">
+							<section>
+							  <h2>Some Slide</h2>
+
+							  <aside class="notes">
+							     Shhh, these are your private notes 📝
+							  </aside>
+							</section>
+						</script></code></pre>
+
+					</section>
+
+					<section>
+						<h3>Notes</h3>
+						<p>Strategy 2: add a <code>data-notes</code> attribute within a <code>section</code> tag</p>
+						
+						<pre><code class="html" data-trim data-line-numbers=|1><script type="text/template">
+							<section data-notes="Shhh, these are your private notes 📝">
+							  <h2>Some Slide</h2>
+							</section>
+						</script></code></pre>
+					</section>
+
+					<section data-notes="Profound reflections go here.">
+						<h3>Notes</h3>
+						<p>Access the speaker notes by pressing "S"</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Math</h3>
+						<p>How do we add <a href="https://revealjs.com/math/">math</a>?</p>
+						<p>(Medium)</p>
+					</section>
+
+					<section>
+						<h3>Math</h3>
+						<p>Import the Math.js from the <a href="https://cdnjs.com/libraries/reveal.js">CDN</a></p>
+						<p>Add below the other <code>script</code> tags</p>
+						<pre><code data-trim class="html" data-line-numbers=3><script type="text/template">
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js">
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js">
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js">
+						</script></code></pre>
+						<p>Make sure to close the <code>script</code> tags above!</p>
+					</section>
+
+					<section>
+						<h3>Math</h3>
+						<p>Add the Math config to the <code>Reveal.initialize</code> block at the end of the file</p>
+						<pre><code class="js" data-trim data-line-numbers=4-8>
+							Reveal.initialize({
+								hash: true,
+								slideNumber: 'h/v',
+								math: {
+								      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+								      config: 'TeX-AMS_HTML-full',
+								      TeX: { Macros: { RR: "{\\bf R}" } }
+								    },
+						</code></pre>
+						<p>Note how this references another CDN to deliver something called <code>mathjax</code> (<a href="https://www.mathjax.org/">link</a>)</p>
+					</section>
+
+					<section>
+						<h3>Math</h3>
+						<p>Add the <code>RevealMath</code> class to the list of plugins inside <code>Reveal.initialize</code></p>
+						<pre><code class="js" data-trim data-line-numbers=9>
+							Reveal.initialize({
+								hash: true,
+								slideNumber: 'h/v',
+								math: {
+								      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+								      config: 'TeX-AMS_HTML-full',
+								      TeX: { Macros: { RR: "{\\bf R}" } }
+								    },
+								plugins: [ RevealHighlight, RevealMath ]
+							});
+						</code></pre>
+						<p>Make sure this list of plugins matches the scripts you imported with the <code>script</code> tags!</p>
+					</section>
+
+					<section>
+						<h3>Math</h3>
+						<p>Now write a slide with some math!</p>
+						<p>Math is written in a syntax adapted from <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX</a></p>
+						<pre><code class="tex" data-trim data-line-numbers=1-2,6-7|3-5|3|4|5>
+							\[
+							\begin{aligned}
+							  \dot{x} &amp; = \sigma(y-x) \\
+							  \dot{y} &amp; = \rho x - y - xz \\
+							  \dot{z} &amp; = -\beta z + xy
+							\end{aligned} 
+							\]
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Math</h3>
+						<p>The code from the previous slide looks like this:</p>
+						\[
+						\begin{aligned}
+							  \dot{x} &amp; = \sigma(y-x) \\
+							  \dot{y} &amp; = \rho x - y - xz \\
+							  \dot{z} &amp; = -\beta z + xy
+							\end{aligned} 
+						\]
+					</section>
+
+				</section>
+
+				<section>
+					<h3>Outline for Friday, April 2</h3>
+					<ul>
+						<li><a href="https://github.com/brianckeegan/brianckeegan.github.io/blob/master/week11.html">Week 11 code here</a> (<a href="https://brianckeegan.github.io/week11.html">slides</a>)</li>
+						<li>Weekly Assignment 10 due tonight!</li>
+						<li>Working with <a href="https://www.mathjax.org/">Mathjax</a></li>
+						<ul>
+							<li>Symbols and Letters</li>
+							<li>Operators</li>
+							<li>Powers and indices</li>
+							<li>Fractions</li>
+							<li>Sums</li>
+							<li>Matrices</li>
+						</ul>
+						</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Mathematical exposition</h3>
+					<p>Many concepts need to be formally expressed with mathematical notation</p>
+					<p><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX</a> is a syntax for "typesetting" math formula</p>
+					<pre><code class='tex' data-trim data-line-numbers=|1,3|2>
+						\[
+						  a^{2} + b^{2} = c^{2}
+						\]
+					</code></pre>
+					\[a^{2} + b^{2} = c^{2}\]
+				</section>
+
+				<section>
+					<h3>Symbols and Letters</h3>
+					<p>There's a <a href="https://mathvault.ca/wp-content/uploads/Comprehensive-List-of-Mathematical-Symbols.pdf">huge universe of symbols and letters</a> to invoke</p>
+					<pre><code class='tex' data-trim>
+						\[
+						  \mu = 1.5, \sigma = .25, 5.2 \pm 3
+						\]
+					</code></pre>
+					\[
+						\mu = 1.5, \sigma = .25, 5.2 \pm 3
+					\]
+				</section>
+
+				<section>
+					<h3>Operators</h3>
+					<p>An operator is a function written as a word</p>
+					<pre><code class='tex' data-trim>
+						\[
+						  \tan \theta = \frac{\sin \theta}{\cos \theta}
+						\]
+					</code></pre>
+					\[
+						\tan \theta = \frac{\sin \theta}{\cos \theta}
+					\]
+				</section>
+
+				<section>
+					<h3>Powers and indices</h3>
+					<p>Adding subscripts and superscripts</p>
+					<p>A caret <code>^</code> raises</p>
+					<p>An underscore <code>_</code> lowers</p>
+					<pre><code class='tex' data-trim>
+						\[
+						  k_{n+1} = n^2 + k_n^2 - k_{n-1}
+						\]
+					</code></pre>
+					\[
+						k_{n+1} = n^2 + k_n^2 - k_{n-1}
+					\]
+				</section>
+
+				<section>
+					<h3>Fractions</h3>
+					<p><code>\frac{numerator}{denominator}</code></p>
+					<p>The <a href="https://en.wikipedia.org/wiki/Quadratic_formula">Quadratic formula</a>:</p>
+					<pre><code class='tex' data-trim>
+						\[
+						  x = \frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
+						\]
+					</code></pre>
+					\[
+					  x = \frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
+					\]
+				</section>
+
+				<section>
+					<h3>Sums</h3>
+					<p>Use <code>\sum</code> with the <code>^</code> and <code>_</code> notation</p>
+					<p>The <a href="https://en.wikipedia.org/wiki/Arithmetic_mean">Arithmetic mean</a></p>
+					<pre><code class='tex' data-trim>
+						\[
+						  \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_{n} = \frac{a_1 + a_2 + ... + a_n}{n}
+						\]
+					</code></pre>
+					\[
+					  \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_{n} = \frac{x_1 + x_2 + ... + x_n}{n}
+					\]
+				</section>
+
+				<section>
+					<section>
+					<h3>Matrices</h3>
+					<p>Matrices are used in linear algebra and machine learning</p>
+					<p>This is an example of <a href="">matrix multiplication</a>:</p>
+					<pre><code class='tex' data-trim data-line-numbers=2,11|3-6|7-10>
+						\[
+						\tiny{
+							\mathbf{A}=\begin{pmatrix}
+							a_{11} & a_{12} \\
+							a_{21} & a_{22} \\
+							\end{pmatrix},\quad
+							\mathbf{B}=\begin{pmatrix}
+							b_{11} & b_{12} \\
+							b_{21} & b_{22} \\
+							\end{pmatrix}
+						}
+						\]
+					</code></pre>
+					</section>
+
+					<section>
+					<h3>Matrices</h3>
+					\[
+						\tiny{
+							\mathbf{A}=\begin{pmatrix}
+							a_{11} & a_{12} \\
+							a_{21} & a_{22} \\
+							\end{pmatrix},\quad
+							\mathbf{B}=\begin{pmatrix}
+							b_{11} & b_{12} \\
+							b_{21} & b_{22} \\
+							\end{pmatrix}
+						}
+						\]
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Challenges</h3>
+						<p>Six common formulas used in data science</p>
+						<ul>
+							<li><a href="https://en.wikipedia.org/wiki/Mean">Geometric mean</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Standard_deviation">Standard deviation</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">Pearson correlation</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Standard_score">Standard score</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidian distance</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Cosine_similarity">Cosine similarity</a></li>
+						</ul>
+						<p>Write the formula in LaTeX/Mathjax</p>
+					</section>
+
+					<section>
+						<h3>Challenge 1</h3>
+						<p>Write the formula for the <a href="https://en.wikipedia.org/wiki/Mean">geometric mean</a></p>
+						<!-- <pre><code class='tex' data-trim> -->
+						\[
+					 	 \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_{n} = \frac{x_1 + x_2 + ... + x_n}{n}
+						\]
+						<!-- </code></pre> -->
+					</section>
+
+					<section>
+						<h3>Challenge 2</h3>
+						<p>Write the formula for the <a href="https://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a></p>
+						\[
+						<!--  x = \frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
+						 a^2 + b^2 = c^2 -->
+						 s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N \left(x_i - \bar{x}\right)^2
+						\]
+					</section>
+
+					<section>
+						<h3>Challenge 3</h3>
+						<p>Write the formula for <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">Pearson correlation</a></p>
+					</section>
+
+					<section>
+						<h3>Challenge 4</h3>
+						<p>Write the formula for the <a href="https://en.wikipedia.org/wiki/Standard_score">standard score</a></p>
+					</section>
+
+					<section>
+						<h3>Challenge 5</h3>
+						<p>Write the formula for <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidian distance</a></p>
+					</section>
+
+					<section>
+						<h3>Challenge 6</h3>
+						<p>Write the formula for <a href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a></p>
+					</section>
+
+					<section>
+						<h3>Want more practice?</h3>
+						<p>If you liked this typesetting translation exercise, try the <a href="https://medium.com/however-mathematics/17-equations-that-changed-the-world-a043a8c24022">17 Equations That Changed the World</a></p>
+						<img data-src="https://pbs.twimg.com/media/Ex_BgLqVEAAP_2D.png" height="400">
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				math: {
+				      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				      config: 'TeX-AMS_HTML-full',
+				      // pass other options into `MathJax.Hub.Config()`
+				      TeX: { Macros: { RR: "{\\bf R}" } }
+				    },
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>

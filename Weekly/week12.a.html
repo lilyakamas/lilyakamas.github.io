@@ -1,17 +1,14 @@
-
-
-
 <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>WA10 - metadeck</title>
+		<title>Week 12 Slides</title>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/solarized.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
@@ -20,36 +17,42 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h3>How to create a slide show using reveal.js</h3>
-					<p style="color:#CFB87C; font-weight:bold;">brought to you by me</p>
-					<p style="color:#565A5C">April 2nd, 2021</h5>
+					<h3>INFO 3402: Information Exposition</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan & Abram Handler</p>
+					<p style="color:#565A5C">Week 12: March 29 - April 2 2021</h5>
 				</section>
 				
 
 				<section>
-					<h3>MEDIA IMAGE</h3>
+					<h3>Outline for today</h3>
 					<ul>
-						<li>Some kind of media (static or animated image)</li>
+						<li><a href="https://github.com/brianckeegan/brianckeegan.github.io/blob/master/week11.html">Week 11 code here</a> (<a href="https://brianckeegan.github.io/week11.html">slides</a>)</li>
+						<li>Weekly Assignment 10</li>
+						<li>Extending <a href="https://revealjs.com/">Reveal.js</a></li>
+						<ul>
+							<li>Animating code blocks</li>
+							<li>Vertical slides</li>
+						</ul>
+						<li>Daily participation</li>
+						<li>Hacking breakouts</li>
+						<ul>
+							<li>Slide numbers</li>
+							<li>Themes</li>
+							<li>Notes</li>
+							<li>Math</li>
+						</ul>
+						<li>Hacking share-outs</li>
 					</ul>
 				</section>
 
 				<!-- Start of a vertical slide -->
-
+				<section>
 					<section>
-						<h3>WA details below</h3>
-					<section>
-					<p>a dictionary code block about Strawberry <3</p>
-					<p>At least two code blocks illustrating how to use a feature</p>
-						<pre><code data-trim data-noescape>
-					fishdict = {
-						  "type": "Betta",
-						  "color": "Pink and White",
-						  "age": 2
-						}
-  						</code></pre>
-						</section>				
-
-
+						<h3>Weekly Assignment 10</h3>
+						<p><b>Due Friday, April 2 by midnight</b></p>
+						<p>Make a "meta-deck": a presentation describing how you made the presentation in Reveal.js.</p>
+						<p>You're making a tutorial for others on how to use a particular feature of Reveal.js.</p>
+					</section>
 
 					<section>
 						<h3>Weekly Assignment 10</h3>
@@ -60,7 +63,6 @@
 							<li>Some kind of animation ("fragment") or slide transition</li>
 						</ul>
 					</section>
-
 					<section>
 						<h3>Weekly Assignment 10</h3>
 						<p>Your deck should have parts like:</p>
@@ -72,7 +74,7 @@
 						</ul>
 					</section>
 
-					<!-- <section>
+					<section>
 						<h3>Weekly Assignment 10</h3>
 						<p>Ideas:</p>
 						<ul>
@@ -84,10 +86,10 @@
 							<li>Adding interactive visualizations (hard)</li>
 						</ul>
 					</section>
-				</section> -->
+				</section>
 				<!-- End of a vertical slide -->
 
-<!-- 
+
 				<section>
 
 					<h3>Extending Reveal.js</h3>
@@ -99,7 +101,7 @@
 						<li>Notes</li>
 						<li>Math</li>
 					</ul>
-				</section> -->
+				</section>
 
 				<!-- Vertical slides for each topic -->
 				<section>
@@ -158,8 +160,33 @@
 						<p>Press ESC</p>
 					</section>
 
-				</section
+				</section>
 
+				<section>
+					<h3>Daily Participation</h3>
+					<ol>
+						<li><a href="https://github.com/brianckeegan/brianckeegan.github.io/blob/master/week12.html">Download this Reveal.js presentation</a></li>	
+						<li>Join a Hack & Tell breakout room</li>
+						<li>15 minutes to implement within file</li>
+						<li>Group share-out at end of class</li>
+						<li><a href="https://canvas.colorado.edu/courses/70121/assignments/1020972">Submit revised file to Canvas</a></li>
+					</ol>
+					
+				</section>
+
+				<section>
+					<h3>Hack & Tell Breakouts</h3>
+					<p>2 breakout rooms for each topic</p>
+					<p>~6-8 students per room</p>
+					<ul>
+						<li>Slide numbers</li>
+						<li>Themes</li>
+						<li>Notes</li>
+						<li>Math</li>
+					</ul>
+					<p>Have a basic example of how to implement</p>
+					<p>Share example to GitHub Pages</p>
+				</section>
 
 				<section>
 
@@ -193,6 +220,15 @@
 						<p>How do we add <a href="https://revealjs.com/math/">math</a>?</p>
 						<p>(Medium)</p>
 						<section>
+					<!-- 	<h3>Maxwell&#8217;s Equations</h3>
+
+						\[  \begin{aligned}
+						\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\
+						\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\
+						\nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}
+						\]
+					</section>
+						</section> -->
 				</section>
 
 			</div>
@@ -215,7 +251,3 @@
 		</script>
 	</body>
 </html>
-<!-- 
-https://megapixelsmatthews.github.io/codeSlides.html
-https://caseyjpaul.github.io/intro%20to%20reveal.js%20copy.html#/3
-https://zemc1520.github.io/50th_try_AHHHHHH.github.io/slideshowjs.html#/3
