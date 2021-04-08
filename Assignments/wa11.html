@@ -1,0 +1,147 @@
+<!-- Use an existing dataset within the vega-datasets to make some visualizations, embed them within a Reveal.js, include some tutorial-style documentation about your approach, and interpret the results.
+
+Use an existing dataset within the vega_datasets (Links to an external site.)
+Make a Reveal.js deck with at least two Altair/Vega visualizations
+Include some tutorial-style documentation how you implemented Vega as code blocks
+Interpret the results of the visualization
+You're welcome to use any of the examples in the galleries for Vega-Lite (Links to an external site.) or Vega (Links to an external site.). The source for the weekly slides (Links to an external site.) also has examples of how to implement both Vega and code blocks in Reveal.js.
+ -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>wa11 - VEGA </title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/sky.min.css" id="theme">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Vega-Lite Visualizations! </h3>
+					<p>9 April 2021</p>
+				</section>
+
+<!-- 				<section>
+					<p>Internal combustion engines face a fundamental engineering trade-off</p>
+					<p>More powerful engines are also less fuel efficient.</p>
+				</section> -->
+
+				<section>
+					<p>Check out this cool visualization below!</p>
+		<div id="vis01"></div>
+		<script type="text/javascript">
+		var spec = {
+			  "data": {
+			    "values": [
+			      {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
+			      {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
+			      {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
+			    ]
+			  },
+			  "mark": "bar",
+			  "encoding": {
+			    "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}},
+			    "y": {"field": "b", "type": "quantitative"}
+			  }
+			}/* JSON dump of your chart's spec */
+		var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+		vegaEmbed("#vis01", spec, opt);
+		</script>
+		<p>the interpretation for this graph is that it is a bar graph, it has a right-leaning skew. 'G' is an outlier. For code showing how this was completed, check out the next slide. </p>
+				</section>
+
+				<section data-transition="fade">
+					<p>The graph on the previous slide was brought to you by this code:</p>
+					<pre><code data-trim data-noescape>
+{
+  "data": {
+    "values": [
+      {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
+      {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
+      {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}},
+    "y": {"field": "b", "type": "quantitative"}
+  }					
+					</code></pre>
+					<p>scroll to the right to see the full code :)</p>
+				</section>
+<!-- 			</div>
+		</div> -->
+
+		<section>
+		<p>The next graph is a bit different!</p>
+<!-- 		add transition
+ -->		<div id="vis02"></div>
+			<script type="text/javascript">
+		var spec = {
+				  "width": 300,
+				  "height": 150,
+				  "data": {
+				    "sequence": {
+				      "start": 0,
+				      "stop": 12.7,
+				      "step": 0.1,
+				      "as": "x"
+				    }
+				  },
+				  "transform": [
+				    {
+				      "calculate": "sin(datum.x)",
+				      "as": "sin(x)"
+				    }
+				  ],
+				  "mark": "line",
+				  "encoding": {
+				    "x": {
+				      "field": "x",
+				      "type": "quantitative"
+				    },
+				    "y": {
+				      "field": "sin(x)",
+				      "type": "quantitative"
+				    }
+				  }
+				}/* JSON dump of your chart's spec */
+
+		var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+		vegaEmbed("#vis02", spec, opt);		
+			</script>
+		</section>
+
+				<section>
+					<p>The code for the visualization is </p>
+					<p>Fuel efficiency drops rapidly with the increase in horsepower</p>
+				</section>
+			</div>
+		</div>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				// plugins: [ RevealHighlight ]
+			});
+		</script>
+	</body>
+</html>
