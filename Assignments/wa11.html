@@ -158,9 +158,84 @@ You're welcome to use any of the examples in the galleries for Vega-Lite (Links 
 		</section>
 
 				<section>
-					<p>The previous visualization represents pigs, cows, and sheep in regards to the US and Great Britan. </p>
-					<p>Fuel efficiency drops rapidly with the increase in horsepower</p>
+					<p>The previous visualization interpretation is that it represents pigs, cows, and sheep in regards to the US and Great Britan. </p>
+					<p>the code is quite long so I will try to fit it on the next slide</p>
 				</section>
+
+				<section data-transition="fade">
+					<p>The graph about cows was brought to you by this code:</p>
+					<pre><code data-trim data-noescape>
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"view": {"stroke": ""}},
+  "width": 800,
+  "height": 200,
+  "data": {
+    "values": [
+      {"country": "Great Britain", "animal": "pigs"},
+      {"country": "Great Britain", "animal": "pigs"},
+      {"country": "Great Britain", "animal": "cattle"},
+      {"country": "Great Britain", "animal": "cattle"},
+      {"country": "Great Britain", "animal": "cattle"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "Great Britain", "animal": "sheep"},
+      {"country": "United States", "animal": "pigs"},
+      {"country": "United States", "animal": "pigs"},
+      {"country": "United States", "animal": "pigs"},
+      {"country": "United States", "animal": "pigs"},
+      {"country": "United States", "animal": "pigs"},
+      {"country": "United States", "animal": "pigs"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "cattle"},
+      {"country": "United States", "animal": "sheep"},
+      {"country": "United States", "animal": "sheep"},
+      {"country": "United States", "animal": "sheep"},
+      {"country": "United States", "animal": "sheep"},
+      {"country": "United States", "animal": "sheep"},
+      {"country": "United States", "animal": "sheep"},
+      {"country": "United States", "animal": "sheep"}
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "{'cattle': '🐄', 'pigs': '🐖', 'sheep': '🐏'}[datum.animal]",
+      "as": "emoji"
+    },
+    {"window": [{"op": "rank", "as": "rank"}], "groupby": ["country", "animal"]}
+  ],
+  "mark": {"type": "text", "baseline": "middle"},
+  "encoding": {
+    "x": {"field": "rank", "type": "ordinal", "axis": null},
+    "y": {"field": "animal", "type": "nominal", "axis": null, "sort": null},
+    "row": {"field": "country", "header": {"title": ""}},
+    "text": {"field": "emoji", "type": "nominal"},
+    "size": {"value": 65}
+  }
+}				
+					</code></pre>
+					<p>scroll to the down to see the full code :)</p>
+				</section>
+
+				<section data-transition="fade">
+					<p>thanks for looking, enjoy doge!</p>
+					<img src="https://media.giphy.com/media/1d7F9xyq6j7C1ojbC5/giphy.gif">
+				</section>
+
 			</div>
 		</div>
 
