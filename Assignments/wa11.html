@@ -11,7 +11,7 @@ You're welcome to use any of the examples in the galleries for Vega-Lite (Links 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>wa11 - VEGA </title>
+		<title>wa11 - VEGA</title>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
@@ -89,34 +89,68 @@ You're welcome to use any of the examples in the galleries for Vega-Lite (Links 
  -->		<div id="vis02"></div>
 			<script type="text/javascript">
 		var spec = {
-				  "width": 300,
-				  "height": 150,
-				  "data": {
-				    "sequence": {
-				      "start": 0,
-				      "stop": 12.7,
-				      "step": 0.1,
-				      "as": "x"
-				    }
-				  },
-				  "transform": [
-				    {
-				      "calculate": "sin(datum.x)",
-				      "as": "sin(x)"
-				    }
-				  ],
-				  "mark": "line",
-				  "encoding": {
-				    "x": {
-				      "field": "x",
-				      "type": "quantitative"
-				    },
-				    "y": {
-				      "field": "sin(x)",
-				      "type": "quantitative"
-				    }
-				  }
-				}/* JSON dump of your chart's spec */
+					  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+					  "config": {"view": {"stroke": ""}},
+					  "width": 800,
+					  "height": 200,
+					  "data": {
+					    "values": [
+					      {"country": "Great Britain", "animal": "pigs"},
+					      {"country": "Great Britain", "animal": "pigs"},
+					      {"country": "Great Britain", "animal": "cattle"},
+					      {"country": "Great Britain", "animal": "cattle"},
+					      {"country": "Great Britain", "animal": "cattle"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "Great Britain", "animal": "sheep"},
+					      {"country": "United States", "animal": "pigs"},
+					      {"country": "United States", "animal": "pigs"},
+					      {"country": "United States", "animal": "pigs"},
+					      {"country": "United States", "animal": "pigs"},
+					      {"country": "United States", "animal": "pigs"},
+					      {"country": "United States", "animal": "pigs"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "cattle"},
+					      {"country": "United States", "animal": "sheep"},
+					      {"country": "United States", "animal": "sheep"},
+					      {"country": "United States", "animal": "sheep"},
+					      {"country": "United States", "animal": "sheep"},
+					      {"country": "United States", "animal": "sheep"},
+					      {"country": "United States", "animal": "sheep"},
+					      {"country": "United States", "animal": "sheep"}
+					    ]
+					  },
+					  "transform": [
+					    {
+					      "calculate": "{'cattle': '🐄', 'pigs': '🐖', 'sheep': '🐏'}[datum.animal]",
+					      "as": "emoji"
+					    },
+					    {"window": [{"op": "rank", "as": "rank"}], "groupby": ["country", "animal"]}
+					  ],
+					  "mark": {"type": "text", "baseline": "middle"},
+					  "encoding": {
+					    "x": {"field": "rank", "type": "ordinal", "axis": null},
+					    "y": {"field": "animal", "type": "nominal", "axis": null, "sort": null},
+					    "row": {"field": "country", "header": {"title": ""}},
+					    "text": {"field": "emoji", "type": "nominal"},
+					    "size": {"value": 65}
+					  }
+					}
+/* JSON dump of your chart's spec */
 
 		var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
 		vegaEmbed("#vis02", spec, opt);		
@@ -124,7 +158,7 @@ You're welcome to use any of the examples in the galleries for Vega-Lite (Links 
 		</section>
 
 				<section>
-					<p>The code for the visualization is </p>
+					<p>The previous visualization represents pigs, cows, and sheep in regards to the US and Great Britan. </p>
 					<p>Fuel efficiency drops rapidly with the increase in horsepower</p>
 				</section>
 			</div>
