@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Week 14: In-Class Exercises</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+		<!-- Loading Vega-->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>INFO 3402: Information Exposition</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan & Abram Handler</p>
+					<p style="color:#565A5C">Week 14: April 12 - 16 2021</p>
+				</section>
+
+				<section>
+					<h2>In-class exercises</h2>
+					<p>Get as far as you can and submit whatever you have completed <a href="https://canvas.colorado.edu/courses/70121/assignments/1028638" target="_blank" rel="noopener noreferrer">on Canvas</a></p>
+					<p>Solutions will be posted on the <a href="https://github.com/cuinfoscience/INFO3402-Spring2021/tree/main/Week14" target="_blank" rel="noopener noreferrer">class GitHub for this week</a></p>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>In-class exercise 1</h2>
+						<p>Monday</p>
+						<p>Use the "<a href="https://github.com/vega/vega-datasets/blob/master/data/co2-concentration.csv" target="_blank" rel="noopener noreferrer">co2-concentration.csv</a>" data to make a line or area plot:</p>
+						<ul>
+							<li>x-axis: "Date"</li>
+							<li>y-axis: "adjusted CO2"</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>In-class exercise 1</h2>
+						<!-- Your Vega div and script go here! -->
+						<div id="vis-area"></div>
+						<script type="text/javascript">
+						var spec = {
+							"width": 300,
+							"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/co2-concentration.csv"
+							},
+							"mark": "area",
+							"encoding": {
+								"x": {
+									"type": "temporal", 
+									"field": "Date",
+								},
+								"y": {
+									"field": "CO2",
+									"type": "quantitative"
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis-area", spec, opt);
+
+						</script>
+						</ul>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>In-class exercise 2</h2>
+						<p>Wednesday</p>
+						<p>Use the "<a href="https://github.com/vega/vega-datasets/blob/master/data/crimea.json" target="_blank" rel="noopener noreferrer">crimea.json</a>" data to make a bar plot:</p>
+						<ul>
+							<li>x-axis: "date"</li>
+							<li>y-axis: "wounds"</li>
+
+						</ul>
+						<p>Make the color of the bars "orange" and the font size for the x and y labels 15</p>
+					</section>
+
+					<section>
+						<h2>In-class Exercise 2</h2>
+						<p>Your visualization goes here!</p>
+						<div id="crimea-bars"></div>
+						
+						<script type="text/javascript">
+						var spec = {
+							"width": 300,
+							"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
+							},
+							"mark": "bar",
+							"encoding": {
+								"x": {
+									"field": "date",
+									"type": "temporal",
+								},
+								"y": {
+									"field": "wounds",
+									"type": "quantitative",
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#crimea-bars", spec, opt);
+						
+						</script>
+
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>In-class exercise 3</h2>
+						<p>Wednesday</p>
+						<p>Use the "<a href="https://github.com/vega/vega-datasets/blob/master/data/penguins.json" target="_blank" rel="noopener noreferrer">penguins.json</a>" data to make a scatterplot:</p>
+						<ul>
+							<li>x-axis: "Flipper length (mm)"</li>
+							<li>y-axis: "Body Mass (g)"</li>
+							<li>color: "Species"</li>
+							<li>shape: "Sex"</li>
+						</ul>
+						<p>Make a wide plot and use "Times New Roman" as font</p>
+						<p>See <a href="https://vega.github.io/vega-lite/examples/point_color_with_shape.html" target="_blank" rel="noopener noreferrer">this example</a> for guidance.</p>
+						<script type="text/javascript">
+							var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/penguins.json"
+							},
+							"width":800,
+							"height":400,
+							"config":{
+								"font":"Times New Roman"
+							},
+							"mark": "point",
+							"encoding": {
+								"x": {
+									"field": "Flipper Length (mm)",
+									"type": "quantitative",
+									"scale": {"zero": false}
+								},
+								"y": {
+									"field": "Body Mass (g)",
+									"type": "quantitative",
+									"scale": {"zero": false}
+								},
+								"color": {
+									"field": "Species",
+									"type": "nominal"
+								},
+								"shape": {
+									"field": "Sex",
+									"type": "nominal"
+								}
+							}	
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#penguins-scatter", spec, opt)
+						</script>
+					</section>
+
+					<section>
+						<h2>In-class Exercise 3</h2>
+						<p>Your visualization goes here!</p>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+	</body>
+</html>
