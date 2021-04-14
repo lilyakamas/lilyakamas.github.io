@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Week 14: In-Class Exercises</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+		<!-- Loading Vega-->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>INFO 3402: Information Exposition</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan & Abram Handler</p>
+					<p style="color:#565A5C">Week 14: April 12 - 16 2021</p>
+				</section>
+				
+				<section>
+					<section>
+						<h2>In-class Exercise 1</h2>
+						<p>Use the "<a href="https://github.com/vega/vega-datasets/blob/master/data/co2-concentration.csv" target="_blank" rel="noopener noreferrer">co2-concentration.csv</a>" data to make a line or area plot:</p>
+						<ul>
+							<li>x-axis: "Date"</li>
+							<li>y-axis: "adjusted CO2"</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>In-class Exercise 1</h2>
+						<p>Your visualization goes here!</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>In-class Exercise 2</h2>
+						<p>Use the "<a href="https://github.com/vega/vega-datasets/blob/master/data/crimea.json" target="_blank" rel="noopener noreferrer">crimea.json</a>" data to make a bar plot:</p>
+						<ul>
+							<li>x-axis: "date"</li>
+							<li>y-axis: "wounds"</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>In-class Exercise 2</h2>
+						<p>Your visualization goes here!</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>In-class Exercise 3</h2>
+						<p>Use the "<a href="https://github.com/vega/vega-datasets/blob/master/data/penguins.json" target="_blank" rel="noopener noreferrer">penguins.json</a>" data to make a scatterplot:</p>
+						<ul>
+							<li>x-axis: "Flipper length (mm)"</li>
+							<li>y-axis: "Body Mass (g)"</li>
+							<li>color: "Species"</li>
+							<li>shape: "Sex"</li>
+						</ul>
+						<p>See <a href="https://vega.github.io/vega-lite/examples/point_color_with_shape.html" target="_blank" rel="noopener noreferrer">this example</a> for guidance.</p>
+					</section>
+					
+					<section>
+						<h2>In-class Exercise 3</h2>
+						<p>Your visualization goes here!</p>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+	</body>
+</html>
