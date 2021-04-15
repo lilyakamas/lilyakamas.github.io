@@ -8,8 +8,6 @@ Include some tutorial-style documentation how you implemented Vega as code block
 Interpret the results of the visualization
 Unlike last week, do not use examples already in the documentation but try to implement visualizations from the vega-datasets. The source for the weekly slides  (Links to an external site.)  (Links to an external site.) also has examples of how to implement both Vega and code blocks in Reveal.js. Post the deck to your GitHub page and submit the URL here. -->
 
-
-
 <!doctype html>
 <html>
 	<head>
@@ -20,7 +18,7 @@ Unlike last week, do not use examples already in the documentation but try to im
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/solarized.min.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
@@ -35,66 +33,79 @@ Unlike last week, do not use examples already in the documentation but try to im
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>WA 11 - Vega/Altair Visualizations</h3>
-					<p style="color:#CFB87C; font-weight:bold;">Brought to you by me</p>
+					<h2>WA 11 - PENGUIN Visualizations</h3>
+					<p>Brought to you by me</p>
 					<p style="color:#565A5C">April 2021</p>
+					<img src="https://media.giphy.com/media/xUA7bbY8cTYHlzXyJq/giphy.gif">
 				</section>
 
 				<section>
 					<h2>Introduction </h2>
-					<p>In this slide deck, we will be looking at data from ... </p>
+					<p>In this slide deck, we will be looking at data from the peguin data we used in class. I just wanted to learn more about pengiuns, tbh. Sometimes I wish I could just waddle and slide away..... </p>
 				</section>
 
 
 				<section>
 					<section>
-						<h2>Visualization #1</h2>
-						<p>Colors, fonts, and/or size are non-default</p>
+						<h2>The first visualization</h2>
+						<p>here you can see the background and font are changed</p>
 						<!-- Your Vega div and script go here! -->
-						<ul>
-							<li>x-axis: "Date"</li>
-							<li>y-axis: "adjusted CO2"</li>
-						</ul>
-					</section>
-
-					<section>
-						<h2>Interpretation</h2>
-						<p>the interpretation of the graph is </p>
-						</script>
-						</ul>
-
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>The second Graph</h2>
-						<p>There are facets, concats, layering, or interactivity</p>
-						<div id="crimea-bars"></div>
+						<div id="penguins-scatter"></div>
 						
 						<script type="text/javascript">
 						var spec = {
-							"width": 300,
-							"height": 200,
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 							"data": {
-								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
+								"url": "https://vega.github.io/vega-datasets/data/penguins.json"
 							},
-							"mark": "bar",
+							"width":800,
+							"height":400,
+							"config":{
+								"font":"Monospace",
+								"background": "#fff9e5",
+								// "fontStyle":"italic"
+							},
+							"mark": "point",
 							"encoding": {
 								"x": {
-									"field": "date",
-									"type": "temporal",
+									"field": "Beak Length (mm)",
+									"type": "quantitative",
+									"scale": {"zero": false}
 								},
 								"y": {
-									"field": "wounds",
+									"field": "Beak Depth (mm)",
 									"type": "quantitative",
+									"scale": {"zero": false}
+								},
+								"color": {
+									"field": "Species",
+									"type": "nominal"
+								},
+								"shape": {
+									"field": "Island",
+									"type": "nominal"
 								}
-							}
+							}	
 						};
 						var opt = {"renderer": "canvas", "actions": false};
-						vegaEmbed("#crimea-bars", spec, opt);
-						
+						vegaEmbed("#penguins-scatter", spec, opt);
 						</script>
+					</section>
+
+					<section>
+						<h2>Interpretation of Visualization 1</h2>
+						<p>This graph? Actully <em>pretty cool.</em> The two axis are Beak Depth and Length, corresponding to the species and island of the penguin. The Adeline Penguins reside on the Torgersen and Dream island. Otherwise the other two penguins, Chinstrap and Gentoo reside on their own respective islands, Dream and Biscoe. Each pengiun has similar beak length and depth to their own species. The techincal aspect, includes a special monotone font and a custom background color to match the slide deck. </p>
+						</script>
+						</ul>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>The second visualization</h2>
+						<p>There are facets, concats, layering, or interactivity</p>
+
 					</section>
 
 					<section>
@@ -109,20 +120,49 @@ Unlike last week, do not use examples already in the documentation but try to im
 				<section>
 					<section>
 						<h2>CODEBLOCK 1</h2>
+						<h6>I added spaces to the 'div' and 'script' tag, so it would work within the 'code block'. One important thing to keep in mind here is that the color of the 'points' are based on the <em>species of the penguin</em>. Otherwise, you should be able to directly copy and paste into your html to work!</h6>
 					<pre><code data-trim data-noescape>
-{
-  "data": {
-    "values": [
-      {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
-      {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
-      {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
-    ]
-  },
-  "mark": "bar",
-  "encoding": {
-    "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}},
-    "y": {"field": "b", "type": "quantitative"}
-  }					
+						< div id="penguins-scatter">< /div>
+						< script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/penguins.json"
+							},
+							"width":800,
+							"height":400,
+							"config":{
+								"font":"Monospace",
+								"background": "#fff9e5", // this is the custom background color
+							},
+							"mark": "point",
+							"encoding": {
+								"x": {
+									"field": "Beak Length (mm)",
+									"type": "quantitative",
+									"scale": {"zero": false}
+								},
+								"y": {
+									"field": "Beak Depth (mm)",
+									"type": "quantitative",
+									"scale": {"zero": false}
+								},
+								"color": { 
+									"field": "Species",
+									"type": "nominal"
+								},
+								"shape": {
+									"field": "Island",
+									"type": "nominal"
+								}
+							}	
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#penguins-scatter", spec, opt);
+						< /script>	
+						// this is the last line 
+						// no this is 
+
 					</code></pre>
 					</section>
 
