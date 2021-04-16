@@ -104,15 +104,70 @@ Unlike last week, do not use examples already in the documentation but try to im
 				<section>
 					<section>
 						<h2>The second visualization</h2>
-						<p>There are facets, concats, layering, or interactivity</p>
+						<p>This involves layering!</p>
 
+						<div id="vis-penguins-layer-line"></div>
+						<script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/penguins.json"
+							},
+							"width":800,
+							"height":400,
+							"config":{
+								"font":"Monospace",
+								"background": "#fff9e5",
+							},
+							"layer":[{
+								"mark": "line",
+								"encoding":{
+									"x":{
+										"field":"Species",
+										"type":"nominal"
+									},
+									"y":{
+										"field":"Beak Length (mm)",
+										"type":"quantitative"
+									},
+									"color": {"value":"red"}
+								}
+							},{
+								"mark": "line",
+								"encoding":{
+									"x":{
+										"field":"Species",
+										"type":"nominal"
+									},
+									"y":{
+										"field":"Beak Depth (mm)",
+										"type":"quantitative"
+									},
+									"color": {"value":"green"}
+								}
+							},{
+								"mark": "line",
+								"encoding":{
+									"x":{
+										"field":"Species",
+										"type":"nominal"
+									},
+									"y":{
+										"field":"Flipper Length (mm)",
+										"type":"quantitative"
+									},
+									"color": {"value":"blue"}
+								}
+							}]
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis-penguins-layer-line", spec, opt);
+						</script>
 					</section>
 
 					<section>
 						<h2>Interpretation</h2>
-						<p>The analysis for this graph is</p>
-
-
+						<p>Wow! What a fun layered graph we have! The three elements implimented in the graph are Beak Length, Beak Depth, and Flipper Length. As you can see, the flipper length is much longer than either the Beak Length or Depth. The Chinstrap Penguins seemingly have shorter flippers than their counterparts, but a longer Beak Depth. Almost as deep as the Gentoo Penguins. While this graph isn't perfect or completetly visually appealing, you can learn some new information from it. </p>
 					</section>
 
 				</section>
@@ -168,21 +223,66 @@ Unlike last week, do not use examples already in the documentation but try to im
 
 					<section>
 						<h2>CODEBLOCK 2</h2>
-						<p>here you can view the code block</p>
+						<p>just copy and paste this boy and you've got a line graph about penguins! don't forget to remove the spaces¡</p>
 					<pre><code data-trim data-noescape>
-{
-  "data": {
-    "values": [
-      {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
-      {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
-      {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
-    ]
-  },
-  "mark": "bar",
-  "encoding": {
-    "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}},
-    "y": {"field": "b", "type": "quantitative"}
-  }					
+< div id="vis-penguins-layer-line">< /div>
+< script type="text/javascript">
+var spec = {
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"data": {
+		"url": "https://vega.github.io/vega-datasets/data/penguins.json" //check to make sure this data still works!
+	},
+	"width":800,
+	"height":400,
+	"config":{
+		"font":"Monospace",
+		"background": "#fff9e5", // custom background color
+	},
+	"layer":[{
+		"mark": "line",
+		"encoding":{
+			"x":{
+				"field":"Species",
+				"type":"nominal" // this is nominal data
+			},
+			"y":{
+				"field":"Beak Length (mm)",
+				"type":"quantitative"
+			},
+			"color": {"value":"red"}
+		}
+	},{
+		"mark": "line",
+		"encoding":{
+			"x":{
+				"field":"Species",
+				"type":"nominal"
+			},
+			"y":{
+				"field":"Beak Depth (mm)",
+				"type":"quantitative"
+			},
+			"color": {"value":"green"}
+		}
+	},{
+		"mark": "line",
+		"encoding":{
+			"x":{
+				"field":"Species",
+				"type":"nominal"
+			},
+			"y":{
+				"field":"Flipper Length (mm)",
+				"type":"quantitative"
+			}, 
+			"color": {"value":"blue"} // the blue is a bit bright, but I like it more than the grey
+		}
+	}]
+};
+var opt = {"renderer": "canvas", "actions": false};
+vegaEmbed("#vis-penguins-layer-line", spec, opt);
+< /script>				
+// this is the last line
 					</code></pre>
 					</section>
 
