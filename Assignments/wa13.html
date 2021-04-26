@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel='stylesheet' href='./styles.css'> 
+	<link rel='stylesheet' href='./styles.css'> <!-- here is my custom css file, its also linked at the bottom -->
+	<title>wa13</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/solarized.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+		<!-- Loading Vega-->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
 </head>
 	<body>
-		<h1 id="title">DOGE COIN</h1>
-		<h2 id="subtitle">Fact or Fiction?</h2>
+		<h1 id="title">DOGE COIN VISUALIZATIONS</h1>
+		<!-- <h2 id="subtitle">Fact or Fiction?</h2> -->
 
-<!-- Integrate the skills you've learned this semester into a single assignment.
+		<div class="paragraph">			
+		<p></p>
+		<p> In early January, we all laughed about the GameStonk Culture and the stock market crashing, now, it's coming back once again. This 'fake' stock has been in the stock market for sometime, and it is only growing. My thesis is: that dogecoin and seattle weather may be realted. In this day and age of data and collection, some may want us to find out the correlation between multiple things.</p>
+
+		
+		<h2 id="subtitle">Visualization 1</h2>
+	
+		<div id="dogecoin-vis"></div>
+     	<script type="text/javascript">
+        var spec = {
+
+           "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 700,
+            "height": 400,
+            "data": {
+              "url": "https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/492e9a6143d017e8eb08c08ae0006b34/dogecoin_csv.csv"
+            },
+
+            "mark": "line",
+
+            "encoding": {
+              "x": {
+                  "field": "date",
+                  "type": "temporal"
+              },
+              "y": {
+                  "field": "price(USD)",
+                  "type": "quantitative",
+                  //"timeUnit": "year"
+              },
+            },
+          };
+        /* JSON dump of your chart's spec */
+        var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+        vegaEmbed("#dogecoin-vis", spec, opt);
+      </script>
+
+		<p>For this first Visualization, I compare the date, as well as the price in US Dollars. As you can see in this line graph, there are ups and downs to each month, in every year. However, you can see that more recently the price has been going up, but that was over four years ago. The data does not reach today for some reason, even though it is most active today. </p>
+		<p>                     
+
+
+		</p>
+		<p> I am compairing DogeCoin to Seatle Weather, you can find the data <a href="https://github.com/vega/vega-datasets/blob/master/data/seattle-weather.csv">here</a>. The data looks at date, precipitation, temp_max, temp_min, wind and weather. For the purpose of the visualizations, I will be comparing the percipitation level as well as the date. This will make it easiest to create and understand the visualization. </p>
+
+		<h2 id="subtitle">Visualization 2</h2>
+		<div id="vis02"></div>
+      	<script type="text/javascript">
+        var spec = {
+
+           "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+            "width": 700,
+            "height": 350,
+            "data": {
+              "url": "https://vega.github.io/vega-datasets/data/seattle-weather.csv"
+            },
+            "encoding": {
+              "x": {
+                  "field": "date",
+                  "type": "temporal",
+                  //"timeUnit": "year",
+              },
+              "y": {
+                  "field": "precipitation",
+                  "type": "quantitative"
+              }
+            },
+            "mark": "bar"
+          };
+        /* JSON dump of your chart's spec */
+        var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+        vegaEmbed("#vis02", spec, opt);
+      </script>
+
+		<p>In conclusion, it does not seem like the weather in Seattle has little if any impact on the price of DogeCoin. Of course, we could always specualte that in October 2016, because it had little percipation during that time, the price of DogeCoin rose, creating a small rift in in the graph around October 2016. In early April of 2014, however, the high percipiation may have caused a SPIKE in the price of DogeCoin. I wonder, peer reviewer, if you are really reading this, if you are please give me a 20/20. I am so tired. </p>
+
+		<p></p>
+
+
+		<p>Thank you for reading my response! If you wish to see my other pages, <a href="https://lilyakamas.github.io/index.html">click here!</a> I wanted to keep my CSS seperate from the HTML, for easy reading. If you desire to look at the CSS code, <a href="./styles.css">click here</a></p>
+		</div>
+	
+	</body>
+</html>
+
+<!-- 
+https://github.com/dylanherring/dylanherring.github.io
+https://github.com/perminute/perminute.github.io
+https://github.com/ricejack/ricejack.github.io
+https://github.com/Clark-M/Clark-M.github.io
+ -->
+ <!-- Integrate the skills you've learned this semester into a single assignment.
 
  Make a single page with a nice CSS framework (like Bootstrap from Weekly Assignment 6) with a five-paragraph persuasive essay (like Weekly Assignment 2) about what the price of DogeCoin reveals about... anything. DogeCoin (Links to an external site.) 
 
@@ -21,29 +127,3 @@ Make one visualization using the DogeCoin historical price and volume data
 Make one visualization using data about the anything
 Submit the URL of the GitHub page where you are hosting your essay.
  -->
-		<div class="paragraph">			
-
-		<p> In early January, we all laughed about the GameStonk Culture and the stock market crashing, now, it's coming back once again. This 'fake' stock has been in the stock market for sometime, and it is only growing. <b>thesis:</b> my thesis is: </p>
-
-		<p>the evidence collected is:</p>
-		
-		<p>Visualization 1</p>
-
-
-		<p> I am compairing DogeCoin to:</p>
-
-
-		<p>The analysis of this is: </p>
-
-		<p>Visualization 2</p>
-
-		<p>My conclusions are</p>
-
-		<p></p>
-
-
-		<p>Thank you for reading my response! If you wish to see my other pages, <a href="https://lilyakamas.github.io/index.html">click here!</a> I wanted to keep my CSS seperate from the HTML, for easy reading. If you desire to look at the CSS code, <a href="./styles.css">click here</a></p>
-		</div>
-	
-	</body>
-</html>

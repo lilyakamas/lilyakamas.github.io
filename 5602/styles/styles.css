@@ -17,8 +17,8 @@ h1 {
 
 div#title h1 {
     padding: 50px 100px;
-/*    text-transform: uppercase;
-*/}
+    text-transform: uppercase;
+}
 
 p#authors {
     text-align: center;

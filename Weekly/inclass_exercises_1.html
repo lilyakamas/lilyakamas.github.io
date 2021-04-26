@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Week 15: In-Class Exercises</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+		<!-- Loading Vega-->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>INFO 3402: Information Exposition</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan & Abram Handler</p>
+					<p style="color:#565A5C">Week 15: April 19 - 23 2021</p>
+				</section>
+
+				<section>
+					<h2>In-class exercises</h2>
+					<p>Get as far as you can and submit whatever you have completed <a href="https://canvas.colorado.edu/courses/70121/assignments/1033885" target="_blank" rel="noopener noreferrer">on Canvas</a></p>
+					<p>Solutions will be posted on the <a href="https://github.com/cuinfoscience/INFO3402-Spring2021/tree/main/Week15" target="_blank" rel="noopener noreferrer">class GitHub for this week</a></p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Exercise 1: Birdstrikes by State</h2>
+						<p>Use the "<a href="https://raw.githubusercontent.com/vega/vega-datasets/master/data/birdstrikes.csv" target="_blank" rel="noopener noreferrer">birdstrikes.csv</a>" dataset in vega-datasets</p>
+						<p>Make a <a href="https://vega.github.io/vega-lite/docs/bar.html" target="_blank" rel="noopener noreferrer">bar plot</a> with the number of airstrikes per "Origin State"</p>
+						
+						
+					</section>
+
+					<section>
+						<h2>Exercise 1: Birdstrikes by State</h2>
+						<p>Your visualization and explanation goes here!</p>
+						<div id="ex1"></div>
+						<script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"width": 400,
+							"height": 400,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/birdstrikes.csv"
+							},
+						}
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#ex1", spec, opt);
+					</script>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Exercise 2: Birdstrikes by Year</h2>
+						<p>Use the "<a href="https://raw.githubusercontent.com/vega/vega-datasets/master/data/birdstrikes.csv" target="_blank" rel="noopener noreferrer">birdstrikes.csv</a>" dataset in vega-datasets</p>
+						<p>Make a bar or <a href="https://vega.github.io/vega-lite/docs/line.html" target="_blank" rel="noopener noreferrer">line plot</a> with the number of annual airstrikes from "Flight Date"</p>
+					</section>
+
+					<section>
+						<h2>Exercise 2: Birdstrikes by Year</h2>
+						<p>Your visualization and explanation goes here!</p>
+						<div id="ex2"></div>
+						<script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"width": 400,
+							"height": 400,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/birdstrikes.csv"
+							},
+						}
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#ex2", spec, opt);
+					</script>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Exercise 3: Birdstrike heatmap</h2>
+						<p>Make a <a href="https://vega.github.io/vega-lite/docs/rect.html" target="_blank" rel="noopener noreferrer">heatmap</a> with the number of bird strikes by "Time of day" and "Phase of flight"</p>
+					</section>
+
+					<section>
+						<h2>Exercise 3: Birdstrike heatmap</h2>
+						<p>Your visualization and explanation goes here!</p>
+						<div id="ex3"></div>
+						<script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"width": 400,
+							"height": 400,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/birdstrikes.csv"
+							},
+						}
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#ex3", spec, opt);
+					</script>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Exercise 4: Birdstrike histogram</h2>
+						<p>Make a <a href="https://vega.github.io/vega-lite/docs/bin.html" target="_blank" rel="noopener noreferrer">histogram</a> of the "Cost Total $"</p>
+					</section>
+
+					<section>
+						<h2>Exercise 4: Birdstrike histogram</h2>
+						<p>Your visualization and explanation goes here!</p>
+						<div id="ex4"></div>
+						<script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"width": 400,
+							"height": 400,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/birdstrikes.csv"
+							},
+						}
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#ex4", spec, opt);
+					</script>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Exercise 5: Data Is Plural Archive</h2>
+						<p>Use this <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0" target="_blank" rel="noopener noreferrer">URL</a><sup><a href="https://stackoverflow.com/a/28494469/1574687" target="_blank" rel="noopener noreferrer">1</a></sup>: <code>https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/export?gid=0&format=csv</code></p> 
+						<p>Filter the data to only include "links" that contain "nytimes"</p>
+						<p>Make a bar or line plot of the number of "nytimes" links per month since 2015</p>
+					</section>
+
+					<section>
+						<h2>Exercise 5: Data Is Plural Archive</h2>
+						<p>Your visualization and explanation goes here!</p>
+						<div id="ex4"></div>
+						<script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"width": 400,
+							"height": 400,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/birdstrikes.csv"
+							},
+						}
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#ex4", spec, opt);
+					</script>
+					</section>
+
+				</section>
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+	</body>
+</html>
