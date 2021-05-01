@@ -1,4 +1,29 @@
 
+/* this css is for the wa4 & wa13 & wa14 */ 
+
+
+
+#title {
+	font-weight: bold;
+	text-align:center;
+	background-color: #89CFF0;
+	color: white;
+	font-size: 60px;
+}
+
+#subtitle {
+	color: grey;
+	font-size: 16;
+	text-align: center;
+}
+
+.paragraph {
+	text-align: center;
+	color: black;
+	font-size: 12;
+}
+
+
 /* this is the css for the home_page assignment*/
 
 
@@ -46,28 +71,3 @@ footer {
 	font-size: 50px;
 }
 
-
-
-/* this css is for the wa4 & wa13 assignment  */ 
-
-
-
-#title {
-	font-weight: bold;
-	text-align:center;
-	background-color: #89CFF0;
-	color: white;
-	font-size: 60px;
-}
-
-#subtitle {
-	color: grey;
-	font-size: 16;
-	text-align: center;
-}
-
-.paragraph {
-	text-align: center;
-	color: black;
-	font-size: 12;
-}
