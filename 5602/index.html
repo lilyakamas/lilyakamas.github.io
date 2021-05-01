@@ -20,7 +20,7 @@
 
         <div class="section">
             <h2>Abstract</h2>
-            <p><em>In recent years the legalization of marijuana in the United States has become increasingly common as more states take the steps to legalize recreational marijuana use. Colorado is known for being one of the first states to legalize recreational marijuana use so we decided to look into how the recreational use of marijuana has affected DUI rates in the state. To answer this question we used datasets containing information on the number of DUI arrests in Colorado, the number of marijuana sales, and if the marijuana sale was recreational or medical. This data is also broken down by county. We found that recreational sales in both Colorado and Boulder County have greatly increased since 2014 while medical marijuana sales have stayed consistent. Since then, DUI’s have also decreased significantly when compared to the number of recreational marijuana sales, but have only slightly decreased when compared to the number of medical marijuana sales. </em></p>
+            <p>In recent years the legalization of marijuana in the United States has become increasingly common as more states take the steps to legalize recreational marijuana use. Colorado is known for being one of the first states to legalize recreational marijuana use so we decided to look into how the recreational use of marijuana has affected DUI rates in the state. To answer this question we used datasets containing information on the number of DUI arrests in Colorado, the number of marijuana sales, and if the marijuana sale was recreational or medical. This data is also broken down by county. We found that recreational sales in both Colorado and Boulder County have greatly increased since 2014 while medical marijuana sales have stayed consistent. Since then, DUI’s have also decreased significantly when compared to the number of recreational marijuana sales, but have only slightly decreased when compared to the number of medical marijuana sales.</p>
             <!-- <img src="./images/sales-by-month.png"> -->
             <!-- <p class="figures">Figure 1</p> -->
             <div class="odd-arrow-down"></div>
@@ -40,7 +40,8 @@
             The marijuana sales reports are stored as Excel files on Google Drive, so we downloaded the Excel files that started in January 2014 and ended in October 2020. These files contained data such as the month of the sale, the county of the sale, the number of sales per month per county, and the type of sale (recreational or medical). We ran these files through a function that combined these Excel files into one table, which was created using the pandas library. 
              The public crime data we used starts in January 2014 and ends in February 2021. The dataset included data such as the county of the arrest, the number of arrests per county per month, the month of the arrest, and the type of arrest. In this case we only looked at arrests dealing with DUIs. 
             Lastly we read in a Colorado county shapefile that included geographical information on each county in Colorado such as population data and geographical coordinates. This was used to create the Colorado spatial visualizations. </em></p>
-            <img src="./images/graph.png">
+            <img src="./images/colorado_medrec_sales-by-month.png">
+            <p></p>
             <p class="figures">Figure 3</p>
             <div class="odd-arrow-down"></div>
         </div>
@@ -52,16 +53,43 @@
         </div>
 
         <div class="section">
-            <h2> Visualization Analysis</h2>
+            <h2>Sales Visualizations</h2>
             <img src="./images/sales-by-month.png">
-            <p class="figures">Figure 5</p>
-
-            <img src="./images/bars.png">
-            <p class="figures">Figure 4</p>
+            <p class="figures">Figure 1: Colorado Medical and Recreational Cannabis Sales by Month</p>
+            <p>In this visual we are comparing medical and recreational sales of marijuana in the state of Colorado from January 2014 to October 2020. The reason this plot stops in October 2020 is because we could only get sales data up to October 2020. At first glance it is clear that recreational sales have greatly increased over the years while medical sales have stayed somewhat constant with some slight fluctuation each month. If we were to make a prediction about future recreational marijuana sales based off of this plot, it is clear that recreational sales will continue to increase</p>
+            <img src="./images/boulder_medrec-sales-by-month.png">
+            <p class="figures">Figure 2: Boulder County Medical and Recreational Cannabis Sales by Month</p>
+            <p>In this visual we are comparing medical and recreational sales of marijuana in Boulder County, Colorado from January 2014 to October 2020. The reason this plot stops in October 2020 is because we could only get sales data up to October 2020. Here we see that medical marijuana sales have actually decreased over time while recreational sales have increased. It seems that medical sales are starting to become more consistent starting in early 2019. This could be because people who bought marijuana for medical reasons could now be buying it recreationally instead.</p>
+            <img src="./images/normalized_co-medrec-sales-values.png">
+            <p class="figures">Figure 3: Normalized Colorado Medical and Recreational Sale Value</p>
+            <p>Here we can see that DUI arrests have stayed fairly constant since 2014 (when the data begins) even though recreational sales of marijuana have greatly increased. Since the legalization of marijuana in 2012, recreational sales have increased, however, medical marijuana sales have stayed the same since then. Because both values have been normalized to start at 1, this allows us to see how medical marijuana sales and recreational marijuana sales have changed rather than if they had started at their original values. By starting at 1, we can see a better visualization of their changes over time by being able to compare them right next to one another</p>
+            
             <div class="odd-arrow-down"></div>
         </div>
 
+        <div class="section">
+            <h2>Crime Visualizations</h2>
+            <img src="./images/rec-sales_vs_dui-arrests.png">
+            <p class="figures">Figure 4: Recreational Sales vs. DUI Arrests</p>
+            <p>The plot shows an overall negative relationship between recreational marijuana sales and the number of DUI arrests. As recreational sales increase, the number of DUI arrests decreases.</p>
+            <img src="./images/med-sales_vs_dui-arrests.png">
+            <p class="figures">Figure 5: Medical Sales vs. DUI Arrests</p>
+            <p>The plot shows an overall slightly negative relationship between medical marijuana sales and the number of DUI arrests. As medical sales increase, the number of DUI arrests decreases as well.</p>
+            <div class="even-arrow-down"></div>
+        </div>
 
+        <div class="section">
+            <h2>Comparison Visualizations</h2>
+            <img src="./images/rec-sales-map1.png">
+            <img src="./images/rec-sales-map2.png">
+            <p class="figures">Figure 6: Recreational Sales -- Oct. 2014 vs. Oct. 2020</p>
+            <p>In this visual we are comparing medical and recreational sales of marijuana in the state of Colorado from January 2014 to October 2020. The reason this plot stops in October 2020 is because we could only get sales data up to October 2020. At first glance it is clear that recreational sales have greatly increased over the years while medical sales have stayed somewhat constant with some slight fluctuation each month. If we were to make a prediction about future recreational marijuana sales based off of this plot, it is clear that recreational sales will continue to increase</p>
+            <img src="./images/crime-spatical1.png">
+            <img src="./images/crime-spatical2.png">           
+            <p class="figures">Figure 7: DUI Arrests -- Feb. 2014 vs. Feb. 2021</p>
+            <p>In this visual we are comparing medical and recreational sales of marijuana in Boulder County, Colorado from January 2014 to October 2020. The reason this plot stops in October 2020 is because we could only get sales data up to October 2020. Here we see that medical marijuana sales have actually decreased over time while recreational sales have increased. It seems that medical sales are starting to become more consistent starting in early 2019. This could be because people who bought marijuana for medical reasons could now be buying it recreationally instead.</p>
+            <div class="odd-arrow-down"></div>
+        </div>
 
         <div class="section">
             <h2>Discussion and Conclusion</h2>
@@ -73,17 +101,17 @@
 
         <div class="section">
             <h2>References</h2>
-            <p>View our Python code <a href="https://github.com/lilyakamas/4602-final/blob/main/Final%20Project%20(1).ipynb">here</a></p>
            <p>
             <ul>
-                <li>1. Caulkins, Jonathan P., Beau Kilmer, and Mark Kleiman. <em> Marijuana Legalization: What Everyone Needs to Know. </em> Oxford University Press, New York, NY, 2016.</li>
-                <li>2. Ghosh, Tista, et al. “The American Journal of Public Health (AJPH) from the American Public Health Association (APHA) Publications.” American Public Health Association (APHA) Publications, 2015, ajph.aphapublications.org/doi/full/10.2105/AJPH.2015.302875. </li>
-                <li>3. Dills, Angela, et al. “The Effect of State Marijuana Legalizations: 2021 Update.” Cato Institute, 2 Feb. 2021, <a href="www.cato.org/policy-analysis/effect-state-marijuana-legalizations-2021-update."></a></li>
-                <li>4. “Delays in DUI Blood Testing: Impact on Cannabis DUI Assessments.” Taylor & Francis, www.tandfonline.com/doi/abs/10.1080/15389588.2015.1052421. </li>
-                <li>5. Ghosh, Tista S., et al. “Lessons Learned after Three Years of Legalized, Recreational Marijuana: The Colorado Experience.” Preventive Medicine, Academic Press, 21 Feb. 2017, www.sciencedirect.com/science/article/abs/pii/S0091743517300762. </li>
-                <li>6. T., Jordan. “DUI of Marijuana - Colorado Law (Explained By Defense Lawyers).” Shouse Law Group, 18 Feb. 2021, www.shouselaw.com/co/dui/laws/dui-of-marijuana/#:~:text=You%20drive%20under%20the%20influence,%E2%80%9Cper%20se%E2%80%9D%20of%20marijuana. </li>
-                <li>7. Bichell, Rae Ellen. “Scientists Still Seek A Reliable DUI Test For Marijuana.” NPR, NPR, 30 July 2017, www.npr.org/sections/health-shots/2017/07/30/523004450/scientists-still-seek-a-reliable-dui-test-for-marijuana. </li>
-                <li>8. Choi, Namkee G., Diana M. DiNitto, and C. N. Marti. "Older Adults Driving Under the Influence: Associations with Marijuana use, Marijuana use Disorder, and Risk Perceptions." Journal of Applied Gerontology, vol. 38, no. 12, 2019, pp. 1687-1707. ProQuest, https://colorado.idm.oclc.org/login?url=https://www-proquest-com.colorado.idm.oclc.org/scholarly-journals/older-adults-driving-under-influence-associations/docview/2488236899/se-2?accountid=14503, doi:http://dx.doi.org.colorado.idm.oclc.org/10.1177/0733464817745379.</li>
+                <li>Caulkins, Jonathan P., Beau Kilmer, and Mark Kleiman. <em> Marijuana Legalization: What Everyone Needs to Know. </em> Oxford University Press, New York, NY, 2016.</li>
+                <li>Ghosh, Tista, et al. “The American Journal of Public Health (AJPH) from the American Public Health Association (APHA) Publications.” American Public Health Association (APHA) Publications, 2015, ajph.aphapublications.org/doi/full/10.2105/AJPH.2015.302875. </li>
+                <li><a href="www.cato.org/policy-analysis/effect-state-marijuana-legalizations-2021-update">Dills, Angela, et al. “The Effect of State Marijuana Legalizations: 2021 Update.” Cato Institute, 2 Feb. 2021</a></li>
+                <li>“Delays in DUI Blood Testing: Impact on Cannabis DUI Assessments.” Taylor & Francis, www.tandfonline.com/doi/abs/10.1080/15389588.2015.1052421. </li>
+                <li>Ghosh, Tista S., et al. “Lessons Learned after Three Years of Legalized, Recreational Marijuana: The Colorado Experience.” Preventive Medicine, Academic Press, 21 Feb. 2017, www.sciencedirect.com/science/article/abs/pii/S0091743517300762. </li>
+                <li>T., Jordan. “DUI of Marijuana - Colorado Law (Explained By Defense Lawyers).” Shouse Law Group, 18 Feb. 2021, <a href="www.shouselaw.com/co/dui/laws/dui-of-marijuana/#:~:text=You%20drive%20under%20the%20influence,%E2%80%9Cper%20se%E2%80%9D%20of%20marijuana. 
+">:-/</a></li>
+                <li>Bichell, Rae Ellen. “Scientists Still Seek A Reliable DUI Test For Marijuana.” NPR, NPR, 30 July 2017, www.npr.org/sections/health-shots/2017/07/30/523004450/scientists-still-seek-a-reliable-dui-test-for-marijuana. </li>
+                <li>Choi, Namkee G., Diana M. DiNitto, and C. N. Marti. "Older Adults Driving Under the Influence: Associations with Marijuana use, Marijuana use Disorder, and Risk Perceptions." Journal of Applied Gerontology, vol. 38, no. 12, 2019, pp. 1687-1707. ProQuest, https://colorado.idm.oclc.org/login?url=https://www-proquest-com.colorado.idm.oclc.org/scholarly-journals/older-adults-driving-under-influence-associations/docview/2488236899/se-2?accountid=14503, doi:http://dx.doi.org.colorado.idm.oclc.org/10.1177/0733464817745379.</li>
                 <!-- <li>Reference 3</li> -->
             </ul>
             </p> 
@@ -92,9 +120,11 @@
          <div class="section">
             <h2>Data Sources</h2>
             <ul>
-                <li>Reference 3</li>
-                <li>Reference 3</li>
-                <li>Reference 3</li>
+                <p>View the code <a href="https://github.com/lilyakamas/4602-final/blob/main/Final%20Project%20(1).ipynb">here</a></p>
+                <li><a href="https://github.com/lilyakamas/4602-final/blob/main/colorado_monthly_cannabis_sales.csv">Colorado monthly cannabis sales</a></li>
+                <li><a href="https://github.com/lilyakamas/4602-final/blob/main/co_counties.zip">Colorado Counties</a></li>
+                <li><a href="https://github.com/lilyakamas/4602-final/blob/main/DUI%20Arrests%20by%20Month.csv">DUI Arrests by Month</a></li>
+                <li><a href="https://github.com/lilyakamas/4602-final/blob/main/COCannabisSalesReport%202.zip">COCannabisSalesReport</a></li>
             </ul>
         </div>
     </div>
