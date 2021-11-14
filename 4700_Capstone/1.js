@@ -8,27 +8,27 @@ slider.oninput = function() {
   var count = this.value;
   console.log(count)
   if (count == 1){
-	document.body.style.backgroundColor = "#ff2a1a";
+	document.body.style.backgroundColor = "#DE3163";
 	moodoutput.innerHTML = 'bad'
 }
 else if (count == 2
 	) {
-	document.body.style.backgroundColor = "#da6665";
+	document.body.style.backgroundColor = "#F4A460";
 	moodoutput.innerHTML = 'not bad'
 }
 else if (count == 3
 	) {
-	document.body.style.backgroundColor = "#f3d681";
+	document.body.style.backgroundColor = "#CCCCFF";
 	moodoutput.innerHTML = 'soso'
 }
 else if (count == 4
 	) {
-	document.body.style.backgroundColor = "#e6b3e6";
+	document.body.style.backgroundColor = "#40E0D0";
 	moodoutput.innerHTML = 'good'
 }
 else if (count == 5
 	) {
-	document.body.style.backgroundColor = "#2137ff";
+	document.body.style.backgroundColor = "#6495ED";
 	moodoutput.innerHTML = 'perfect'
 }
 }
