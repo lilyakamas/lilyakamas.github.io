@@ -46,6 +46,20 @@
   background: #DDA0DD;
   cursor: pointer;
 }
+.iframe-container {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+}
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
         </style>
 </head>
 
@@ -90,7 +104,9 @@
 
 
         </h5>
+        <div class="iframe-container">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdWCaLvXIKF0W1ykoPEHT5Yc0JPY2yrmeMMFnMUR6wfdf3ZHg/viewform?embedded=true" width="640" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
         <br>
         <br>
         <br>
