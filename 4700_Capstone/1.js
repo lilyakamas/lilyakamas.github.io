@@ -9,27 +9,27 @@ slider.oninput = function() {
   console.log(count)
   if (count == 1){
 	document.body.style.backgroundColor = "#DE3163";
-	moodoutput.innerHTML = 'bad'
+	moodoutput.innerHTML = '&#128544;'
 }
 else if (count == 2
 	) {
 	document.body.style.backgroundColor = "#F4A460";
-	moodoutput.innerHTML = 'not bad'
+	moodoutput.innerHTML = '&#128551;'
 }
 else if (count == 3
 	) {
 	document.body.style.backgroundColor = "#CCCCFF";
-	moodoutput.innerHTML = 'soso'
+	moodoutput.innerHTML = '&#128533;'
 }
 else if (count == 4
 	) {
 	document.body.style.backgroundColor = "#40E0D0";
-	moodoutput.innerHTML = 'good'
+	moodoutput.innerHTML = '&#128515;'
 }
 else if (count == 5
 	) {
 	document.body.style.backgroundColor = "#6495ED";
-	moodoutput.innerHTML = 'perfect'
+	moodoutput.innerHTML = '&#128541;'
 }
 }
 
