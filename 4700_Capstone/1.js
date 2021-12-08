@@ -44,27 +44,27 @@ slider1.oninput = function() {
   console.log(count)
   if (count1 == 1){
 	document.getElementById('sectioncolor').style.backgroundColor = "#ff2a1a";
-	moodoutput1.innerHTML = 'bad'
+	moodoutput1.innerHTML = '&#128574;'
 }
 else if (count1 == 2
 	) {
 	document.getElementById('sectioncolor').style.backgroundColor = "#da6665";
-	moodoutput1.innerHTML = 'not bad'
+	moodoutput1.innerHTML = '&#128575;'
 }
 else if (count1 == 3
 	) {
 	document.getElementById('sectioncolor').style.backgroundColor = "#f3d681";
-	moodoutput1.innerHTML = 'soso'
+	moodoutput1.innerHTML = '&#128572;'
 }
 else if (count1 == 4
 	) {
 	document.getElementById('sectioncolor').style.backgroundColor= "#e6b3e6";
-	moodoutput1.innerHTML = 'good'
+	moodoutput1.innerHTML = '&#128568;'
 }
 else if (count1 == 5
 	) {
 	document.getElementById('sectioncolor').style.backgroundColor = "#2137ff";
-	moodoutput1.innerHTML = 'perfect'
+	moodoutput1.innerHTML = '&#128571;'
 }
 }
 
