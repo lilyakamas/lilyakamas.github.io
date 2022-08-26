@@ -1,0 +1,73 @@
+
+/* this css is for the wa4 & wa13 & wa14 */ 
+
+
+
+#title {
+	font-weight: bold;
+	text-align:center;
+	background-color: #89CFF0;
+	color: white;
+	font-size: 60px;
+}
+
+#subtitle {
+	color: grey;
+	font-size: 16;
+	text-align: center;
+}
+
+.paragraph {
+	text-align: center;
+	color: black;
+	font-size: 12;
+}
+
+
+/* this is the css for the home_page assignment*/
+
+
+* {
+	font-family: sans-serif !important;
+}
+
+body {
+	margin: 40px;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+* {
+	font-family: sans-serif !important;
+}
+
+.custom-btn {
+	padding: 10px;
+	color: #545454;
+	background-color: #E6D1DE;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+/*.card {
+	background-color: whitesmoke;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+}
+*/
+.container {
+	text-align: center;
+}
+
+.title {
+	color: #D4C1CD;
+	font-size: 50px;
+}
+
