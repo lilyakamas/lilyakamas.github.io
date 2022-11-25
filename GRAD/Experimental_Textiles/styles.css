@@ -1,4 +1,4 @@
-
+/*ID IS USED FOR THIS ### */
 #title {
 	font-weight: bold;
 	text-align:center;
@@ -62,6 +62,8 @@ footer {
 	text-align: center;
 }
 
+
+/*CLASS IS USED WITH ... */
 .title {
 	color: #D4C1CD;
 	font-size: 50px;
